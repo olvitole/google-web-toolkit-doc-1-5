@@ -1,0 +1,19 @@
+#summary Deferred binding reduces the size of the generated code that clients need to download and improves run time performance
+
+=Deferred Binding=
+
+Deferred binding is a feature of the GWT compiler that works by generating many versions of code at compile time, only one of which needs to be loaded by a particular client during bootstrapping at runtime. Each version is generated on a per browser basis, along with any other axis that your application defines or uses. For example, if you were to internationalize your application using [DevGuideInternationalization GWT's Internationalization module], the GWT compiler would generate various versions of your application per browser environment, such as "Firefox in English", "Firefox in French", "Internet Explorer in English", etc...  As a result, the deployed !JavaScript code is compact and quicker to download than hand coded !JavaScript, containing only the code and resources it needs for a particular browser environment.
+
+==Topics==
+
+[DevGuideDeferredBindingConcepts Deferred Binding Benefits]
+Introduction to deferrred binding concepts and its benefits over traditional !JavaScript cross-browser support.
+
+[DevGuideDeferredBindingUsing Defining Deferred Binding Rules]
+Defining rules to create your own classes that use Deferred Binding 
+
+[DevGuideDeferredBindingReplacement Deferred Binding with Replacement]
+Using the Deferred Binding Replacement mechanism.
+
+[DevGuideDeferredBindingGenerators Deferred Binding using Generators]
+Using Deferred Binding by defining Generator subclasses.

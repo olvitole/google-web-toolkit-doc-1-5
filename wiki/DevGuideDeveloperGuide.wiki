@@ -1,0 +1,36 @@
+#summary A comprehensive guide to GWT functionality
+=Developer Guide=
+
+The GWT Developer Guide contains a variety of topics that explain the various components of the toolkit and techniques for using them when building applications.
+
+==Topic Guide==
+
+[DevGuideFundamentals Fundamentals]
+Core GWT concepts such as [DevGuideJavaToJavaScriptCompiler compiling Java source into JavaScript] and [DevGuideCrossBrowserSupport cross-browser support].
+
+[DevGuideProjectStructure Project Structure]
+Describes the files and structure of a GWT project.
+
+[DevGuideUserInterface Building User Interfaces]
+As shown in [DevGuideWidgetGallery the gallery], GWT includes a variety of [DevGuideWidgetsAndPanels widgets and panels] that serve as cross-browser building blocks for your application. GWT also includes unique and powerful optimization facilities such as [DevGuideImageBundles image bundles].
+
+[DevGuideHostedMode Debugging in Hosted Mode]
+An embedded web browser lets you run and debug applications directly in any Java development environment before being translated into !JavaScript.
+
+[DevGuideWebMode Deployment in Web Mode]
+Compile your application into !JavaScript for easy deployment.
+
+[DevGuideServerCalls Communicating with a server]
+Make calls to backend servers using [DevGuideRemoteProcedureCalls GWT RPC] or [DevGuideHttpRequests direct HTTP]. 
+
+[DevGuideJUnitIntegration Unit Testing]
+Integration with JUnit lets you test your AJAX code almost as easily as any other Java code.
+
+[DevGuideInternationalization Internationalization]
+Easily support multiple locales with a single code base.
+
+[DevGuideInterop Interoperability]
+Integrate your GWT applications with handwritten or third-party !JavaScript using [DevGuideJavaScriptNativeInterface JavaScript Native Interface (JSNI)]
+
+[DevGuideDeferredBinding Deferred Binding]
+Deferred binding reduces generated code size and improves run time performance.

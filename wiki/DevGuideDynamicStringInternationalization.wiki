@@ -1,0 +1,13 @@
+#summary A flexible and simple method of internationalizing strings that easily integrates with existing web applications.
+
+=Dynamic String Internationalization=
+
+For existing applications that may not support the GWT `locale` client property, GWT offers Dynamic String Internationalization to easily integrate GWT internationalization. 
+
+The [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/i18n/client/Dictionary.html Dictionary] class lets your GWT application consume strings supplied by the [DevGuideHostPage host HTML page]. This approach is convenient if your existing web server has a localization system that you do not wish to integrate with the [DevGuideStaticStringInternationalization static string internationalization] methods. Instead, simply print your strings within the body of your HTML page as a !JavaScript structure, and your GWT application can reference and display them to end users.  
+Since it binds directly to the key/value pairs in the host HTML, whatever they may be, the [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/i18n/client/Dictionary.html Dictionary] class is not sensitive to the [DevGuideSpecifyingLocale GWT locale setting]. Thus, the burden of generating localized strings is on your web server. 
+
+Dynamic string localization allows you to look up localized strings defined in a [DevGuideHostPage host HTML] page at runtime using string-based keys.  
+This approach is typically slower and larger than the static string approach, but does not require application code to be recompiled when messages are altered or the set of locales changes. 
+
+ _Tip: The `Dictionary` class is completely dynamic, so it provides no static type checking, and invalid keys cannot be checked by the compiler. This is another reason we recommend using [DevGuideStaticStringInternationalization static string internationalization] where possible._

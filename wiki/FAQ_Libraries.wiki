@@ -1,0 +1,9 @@
+#summary Questions about the design and functionality of the GWT supplied APIs.
+
+=Using GWT Libraries=
+
+  * [FAQ_DOMNonW3CAPI Why does the DOM object expose a non-W3C API?]
+
+  * [FAQ_ImageBundleImagesNotShowingUp Why aren't my ImageBundle images showing in IE?]
+
+  * [FAQ_HistoryOnSafari2 GWT's History feature is broken on Safari 2.0!]

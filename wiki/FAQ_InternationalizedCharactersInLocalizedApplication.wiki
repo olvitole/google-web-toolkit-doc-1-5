@@ -1,0 +1,13 @@
+#summary Why don't international characters work in my localized application?
+
+= Why don't international characters work in my localized application? =
+
+Frequently users will build an application and embed international characters into Java source files.  When they run and view the application in a web browser, sometimes the international characters do not appear correctly.
+
+Usually this is because Java requires UTF-8 for source code files containing international characters, but the users' source files are not properly encoded in UTF-8. Frequently this is because the editor used to generate the files (such as an IDE) is not configured to save the files as UTF-8.
+
+If you are encountering this issue, check that your editor of choice is capable of saving files as UTF-8, and that it is currently configured to do so.
+
+Also, if your web page content has localized data, you probably want to encode it with UTF-8 as well.  Add the following tag to the `<head>` element of your document.
+
+`<meta http-equiv="content-type" content="text/html;charset=utf-8" />`

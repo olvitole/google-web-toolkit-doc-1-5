@@ -1,0 +1,19 @@
+#summary Core GWT concepts such as compiling Java source into JavaScript, debugging, cross-browser support, and defining modules.
+
+=Fundamentals=
+
+This section presents the fundamental concepts of GWT.  
+
+==Topics==
+
+[DevGuideJavaToJavaScriptCompiler GWT Compiler]
+A compiler that transforms your working Java application into an equivalent !JavaScript application.
+
+[DevGuideClientSide Client-side Code]
+"Client-side" refers to source code that is intended to be translated and run in a web browser as !JavaScript.
+
+[DevGuideServerSide Server-side Code]
+"Server-side" refers to source code that is not intended to be translated and will only run on a server as bytecode.
+
+[DevGuideCrossBrowserSupport Cross-browser Support]
+The architecture of GWT makes it easy to support multiple browsers with a single code base.

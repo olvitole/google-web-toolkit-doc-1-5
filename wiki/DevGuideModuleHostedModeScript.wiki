@@ -1,0 +1,29 @@
+#summary Command-line program that launches an application in Hosted Mode for debugging
+
+==<module>-shell Script==
+
+The `<module>-shell` script is a command-line program that runs a GWT module in [DevGuideHostedMode Hosted Mode].  This script is created by the [DevGuideApplicationCreator applicationCreator] tool used to generate a sample project in the standard layout.
+
+The following is a full list of command-line arguments you can pass to the Development Shell:
+
+{{{
+$PP_OFF
+GWTShell [-port port-number | "auto"] [-noserver] [-whitelist whitelist-string] [-blacklist blacklist-string] [-logLevel level] [-gen dir] [-out dir] [-style style] [url]
+}}}
+
+|| -out <directory> || The directory to write output files into (defaults to current) ||
+|| -port <port number> || Change the default port number of the embedded Tomcat server.  If `auto` is specified, a random unused port number will be used. ||
+|| -noserver || Prevents the embedded Tomcat server from running, even if a port is specified ||
+|| -whitelist <regex list>||  Allows the user to browse URLs that match the specified regexes (comma or space separated) ||
+|| -blacklist <regex list>||  Prohibits the user from browsing URLs that match the specified regexes (comma or space separated) ||
+|| -logLevel <level> || The level of logging detail: ERROR, WARN, INFO, TRACE, DEBUG, SPAM, or ALL ||
+|| -gen <directory> || The directory into which generated files will be written for review ||
+|| -style || Script output style: OBF`[`USCATED`]`, PRETTY, or DETAILED (defaults to OBF) || 
+
+Any arguments at the end of the command-line are assumed to be URLs used to launch the hosted browser.
+
+===See Also===
+
+ * [DevGuideApplicationCreator applicationCreator command-line tool]
+
+ * [DevGuideHostedMode Hosted Mode]

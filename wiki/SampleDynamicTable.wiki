@@ -1,0 +1,14 @@
+=Dynamic Table Sample Application=
+
+http://google-web-toolkit-doc-1-5.googlecode.com/svn/wiki/SampleDynamicTable.png
+
+A table of data that demonstrates paging over objects retrieved through RPCs.
+
+[http://gwt.google.com/samples/DynaTable/DynaTable.html See Demo]
+
+GWT features used:
+
+ * [DevGuideUserInterface UI widgets]
+ * [DevGuideRemoteProcedureCalls Polymorphic RPC]
+ 
+|| *[http://code.google.com/webtoolkit/download.html Download Source Code]* ||

@@ -1,0 +1,25 @@
+#summary The basics of GWT development, from installation of the GWT software to a finished application.
+
+=The Basics=
+
+We'll start by covering the basics of GWT development, creating a project from scratch and then incrementally adding features until we have a fully-functional application ready to be deployed to a web server.
+
+At the end of this section, you can continue to the [GettingStartedMore next section] of the Getting Started guide and learn about more advanced topics like [GettingStartedRPC remote procedure calls] and [GettingStartedI18n internationalization].
+  
+ * [GettingStartedInstall Install GWT] Install the GWT package and Java SDK
+
+ * [GettingStartedCreateProject Create a GWT Project] Creating a new project for developing !StockWatcher
+   
+ * [GettingStartedAppDesign Design the Application] A list of requirements for our sample application and the GWT features that will be used to implement it.
+
+ * [GettingStartedUserInterface Create the User Interface] Laying out the visual design and adding user interface components to build.
+
+ * [GettingStartedEvents Add Event Listeners] How to add code that responds to events coming back from the browser.
+
+ * [GettingStartedClientFunc Implement client-side Functionality] Implementing more logic.
+
+ * [GettingStartedHostedMode Debug in Hosted Mode] How to debug using GWT's Development Shell in hosted mode.
+
+ * [GettingStartedStyle Add CSS Styling] Adjust the look and feel of !StockWatcher using stylesheets.
+
+ * [GettingStartedWebMode Deploy] Compile your client-side Java code into !JavaScript using the Java compile and run it in a web browser.

@@ -1,0 +1,26 @@
+#summary Command-line script that compiles a GWT module's Java source into equivalent deployable JavaScript.
+
+==<module>-compile Script==
+
+The `<module>-compile` script is a command-line program that compiles a GWT module and creates !JavaScript to deploy an application in [DevGuideWebMode web mode].  This script is created by the [DevGuideApplicationCreator applicationCreator] tool used to generate a sample project in the standard layout.
+
+The following is a full list of command-line arguments you can pass to the GWT compiler:
+
+{{{
+$PP_OFF
+GWTCompiler [-logLevel level] [-gen dir] [-out dir] [-treeLogger] [-style style] module
+}}}
+
+|| -logLevel <level> || The level of logging detail: ERROR, WARN, INFO, TRACE, DEBUG, SPAM, or ALL ||
+|| -gen <directory> || The directory into which generated files will be written for review ||
+|| -out <directory> || The directory to write output files into (defaults to current) ||
+|| -treeLogger || Logs output in a graphical tree view ||
+|| -style || Script output style: OBF`[`USCATED`]`, PRETTY, or DETAILED (defaults to OBF) || 
+
+Any arguments at the end of the command-line are assumed to be names of modules (java class names with their full package names) to compile.
+
+===See Also===
+
+ * [DevGuideApplicationCreator applicationCreator command-line tool]
+
+ * [DevGuideWebMode Web Mode]
