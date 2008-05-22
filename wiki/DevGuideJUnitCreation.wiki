@@ -1,4 +1,4 @@
-#summary An example of how to create JUnit test cases for your GWT project
+﻿#summary An example of how to create JUnit test cases for your GWT project
 
 =Creating a Test Case=
 
@@ -182,7 +182,7 @@ Some IDEs have direct support for the JUnit testing framework.  When run with th
 
 ==Running your test in Web Mode==
 
-When using the [DevGuideJunitCreator junitCreator] tool, several command-line scripts are created to launch your tests in either hosted mode or web mode.  Make sure you test in both modes - although rare, there are [DevGuideLanguageSupport some differences between Java and JavaScript] that could cause your code to produce different results when deployed.
+When using the [DevGuideJunitCreator junitCreator] tool, several command-line scripts are created to launch your tests in either hosted mode or web mode.  Make sure you test in both modes - although rare, there are [DevGuideJavaCompatibility some differences between Java and JavaScript] that could cause your code to produce different results when deployed.
 
 If you do not use the [DevGuideJunitCreator junitCreator] tool and instead decide to run the JUnit !TestRunner from command line, you must add some additional arguments get your unit tests running.  By default, tests run in [DevGuideHostedMode hosted mode] are run as normal Java bytecode in a JVM. Overriding this default behavior requires passing arguments to the GWT shell. Arguments cannot be passed directly through the command-line, because normal command-line arguments go directly to the JUnit runner. Instead, define the system property `gwt.args` to pass arguments to GWT. For example, to run in [DevGuideWebMode web mode], declare `-Dgwt.args="-web"` as a JVM argument when invoking JUnit. To get a full list of supported options, declare `-Dgwt.args="-help"` (instead of running the test, help is printed to the console). 
 
