@@ -1,0 +1,5 @@
+#summary How does GWT work?
+
+= How does GWT work? =
+
+Google Web Toolkit ships with a Java-to-!JavaScript compiler and a special web browser that helps you debug your GWT applications. For details on how they work, check out the [Overview GWT product overview].

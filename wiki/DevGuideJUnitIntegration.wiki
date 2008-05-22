@@ -1,0 +1,21 @@
+#summary Integration with JUnit lets you test your AJAX application code almost as easily as any other Java code.
+
+=Unit Testing=
+
+Creating a battery of good unit test cases is an important part of ensuring the quality of your application over its lifecycle.  To aid developers with their testing efforts, GWT provides integration with the popular [http://www.junit.org JUnit] unit testing framework.  GWT allows JUnit test cases to run in either hosted mode or web mode, and also provides a benchmarking facility to help you understand the performance characteristics of the components of your application.
+
+==Specifics==
+[DevGuideJUnitCreation Creating a JUnit Test Case] 
+An example of how to create a JUnit test Case
+
+[DevGuideJUnitAsync Asynchronous Testing]
+How to test event-driven features such as server calls or timers.
+
+[DevGuideJUnitSuites Using Test Suites]
+Using Test Suites can speed up running unit tests.
+
+[DevGuideJUnitSetUp  Prepare for and tear down after test cases]
+How to prepare for and tearing down after JUnit test cases.
+
+[DevGuideJUnitBenchmarking Benchmarking]
+How to use GWT's JUnit support to create and report on benchmarks to help you identify performance hot spots and optimize your code.

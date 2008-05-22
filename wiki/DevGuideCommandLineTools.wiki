@@ -1,0 +1,27 @@
+#summary Useful command-line tools for getting started.
+
+=Command-line Tools=
+
+GWT includes a set of scripts that can be run from the command-line.  Many of these are tools which generate new files, to quickly get a project off the ground.  They can also be used to add new things to existing projects. For example, `projectCreator` can be used to make an Eclipse project for one of the samples that comes with GWT, and `junitCreator` can be used to add a new unit test to an existing project.
+
+==Topics==
+[DevGuideProjectCreator projectCreator]
+Generate an Ant buildfile and/or Eclipse project.
+
+[DevGuideApplicationCreator applicationCreator]
+Generate a starter application, including launch scripts.
+
+[DevGuideJunitCreator junitCreator]
+Generate a JUnit test for an existing project.
+
+[DevGuideI18nCreator i18nCreator]
+Generate an i18n properties file and synchronization script for an existing project.
+
+[DevGuideBenchmarkViewer benchmarkViewer]
+Displays benchmark results.
+
+[DevGuideModuleCompileScript <modulename>-compile]
+Compile the Java code in the named module into !JavaScript.  This script is created by [DevGuideApplicationCreator applicationCreator].
+
+[DevGuideModuleHostedModeScript <modulename>-shell]
+Run the named module in [DevGuideHostedMode Hosted Mode].  This script is created by [DevGuideApplicationCreator applicationCreator].

@@ -1,0 +1,14 @@
+=Mail Sample Application=
+
+http://google-web-toolkit-doc-1-5.googlecode.com/svn/wiki/SampleMail.png
+
+A replica of the UI of a desktop email application.
+
+[http://gwt.google.com/samples/Mail/Mail.html See Demo]
+
+GWT features used:
+
+ * [DevGuideUserInterface UI widgets]
+ * [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/History.html History management]
+
+|| *[http://code.google.com/webtoolkit/download.html Download Source Code]* ||

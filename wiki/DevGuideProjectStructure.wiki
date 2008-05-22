@@ -1,0 +1,12 @@
+#summary Describes the files and structure of a GWT project.
+
+=Project Structure=
+
+[DevGuideDirectoriesPackageConventions Directories/Package conventions]
+GWT projects are built from a recommended package layout.
+
+[DevGuideModules Modules]
+Modules are XML files that contain settings related to your application or library.
+
+[DevGuideHostPage HTML Host Pages]
+A host page is an HTML document that includes a GWT module.

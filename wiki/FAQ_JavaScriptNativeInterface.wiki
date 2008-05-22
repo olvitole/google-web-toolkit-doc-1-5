@@ -1,0 +1,9 @@
+#summary The Java to !JavaScript interface.
+
+=!JavaScript Native Interface=
+
+  * [FAQ_CallGWTMethodFromHandwrittenJS How do I call Java methods from handwritten JavaScript or third party libraries?]
+
+  * [FAQ_EvalJSNIMethod Help! I'm having problems with eval() in my JSNI method!]
+
+  * [FAQ_BridgeMethodNotWorkingOnclick Why doesn't the bridge call to my JSNI method work in <some_obj>.onclick?]

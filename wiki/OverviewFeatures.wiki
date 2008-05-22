@@ -1,0 +1,23 @@
+=GWT Features=
+
+ * [DevGuideUserInterface Dynamic, reusable UI components] - Create [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/Widget.html Widgets] by compositing other Widgets. Lay out Widgets automatically in [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/Panel.html Panels]. Send your Widget to other developers in a JAR file.
+   
+ * [DevGuideRemoteProcedureCalls Really simple RPC] - To communicate from your web application to your web server, you just need to define serializable Java classes for your request and response. In production, GWT automatically serializes the request and deserializes the response from the server. GWT's RPC mechanism can even handle polymorphic class hierarchies, and you can throw exceptions across the wire.
+
+ * [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/History.html Browser history management] - No, AJAX applications _don't_ need to break the browser's back button. GWT lets you make your site more usable by easily adding state to the browser's back button history.
+
+ * [DevGuideHostedMode Real debugging] - In production, your code is compiled to !JavaScript, but at development time it runs in the Java virtual machine. That means when your code performs an action like handling a mouse event, you get full-featured Java debugging, with exceptions and the advanced debugging features of IDEs like [http://www.eclipse.org/ Eclipse].
+
+ * [DevGuideCrossBrowserSupport Browser compatible] - Your GWT applications automatically support IE, Firefox, Mozilla, Safari, and Opera with no browser detection or special-casing within your code in most cases.
+
+ * [DevGuideJUnitIntegration JUnit integration] - GWT's direct integration with [http://junit.org/ JUnit] lets you unit test both in a debugger and in a browser...and you can even unit test asynchronous RPCs.
+
+ * [DevGuideInternationalization Internationalization] - Easily create efficient internationalized applications and libraries.
+
+ * [DevGuideJavaScriptNativeInterface Interoperability and fine-grained control] - If GWT's class library doesn't meet your needs, you can mix handwritten JavaScript in your Java source code using our [DevGuideJavaScriptNativeInterface JavaScript Native Interface (JSNI)].
+
+ * [http://code.google.com/p/gwt-google-apis/ Google API Library: Google Gears support] - We are in the process of building support for using Google APIs in GWT applications. Initially, we are providing support for [http://code.google.com/apis/gears/ Google Gears], the recently-launched developer product that extends the browser to allow developers to make web-based applications function even while offline. If you would like to download this library please visit the [http://code.google.com/p/gwt-google-apis/ open source project]. We are planning to add support for other [http://code.google.com/apis/ Google APIs]; if you'd like to help, please check out [http://code.google.com/webtoolkit/makinggwtbetter.html Making GWT Better].
+
+ * [http://code.google.com/p/google-web-toolkit/ Completely Open Source] - All of the code for GWT is available under the Apache 2.0 license. If you are interested in contributing, please visit [http://code.google.com/webtoolkit/makinggwtbetter.html Making GWT Better].
+
+For a step-by-step installation and usage guide, please see the [GettingStarted Getting Started Guide].

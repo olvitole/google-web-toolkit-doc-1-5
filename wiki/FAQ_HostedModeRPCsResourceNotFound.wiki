@@ -1,0 +1,26 @@
+#summary Why do I get a "resource not found" error when making an RPC call in hosted mode.
+
+= Why do I get a "resource not found" error when making an RPC call in hosted mode? =
+
+When testing a new RPC interface, you may get the following message when running in hosted mode:
+
+{{{
+The development shell servlet received a request for 'rpcs/myService' in module 'com.example.RPCExample' 
+   Resource not found: rpcs/myService
+}}}
+
+This means that the servlet engine could not find the server-side definition of your RPC method.  Check the following:
+
+ * The server side code should be defined.  By convention, this is located in the `server` direcory in the [DevGuideDirectoriesPackageConventions standard project structure.]
+ 
+ * The server side code should be compiled before starting hosted mode.  Of significant note, if you are simply using a plain text editor and the _<module>_`-shell` and  _<module>_`-compile` scripts created by `applicationCreator`, these scripts  do *NOT* compile server side code.
+
+ * Make sure the server code path is listed in the _<module>_`.gwt.xml` file:
+
+{{{
+     <!-- Example servlet loaded into hosted mode tomcat       -->
+     <servlet path="/myService" class="com.example.server.MyServiceImpl" />
+}}}
+
+  * Make sure the compiled server classes are available to the hosted mode shell.  You may need to modify the classpath when launching the hosted mode shell (for example, by editing _<module>_`-shell`) if your server classes are in a separate jar file or directory tree.
+ 

@@ -1,0 +1,103 @@
+#summary Widgets are most easily styled using cascading style sheets (CSS).
+
+=Style Sheets=
+
+GWT widgets rely on cascading style sheets (CSS) for visual styling. 
+
+
+In GWT, each class of widget has an associated style name that binds it to a CSS rule.   Furthermore, you can assign an id to a particular component to create a CSS rule that applies just to that one component. By default, the class name for each component is `gwt-<classname>`.  For example, the [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/Button.html Button widget] has a default style of `gwt-Button`. 
+
+In order to give all buttons a larger font, you could put the following rule in your application's CSS file:  
+
+{{{
+$PP_OFF
+  .gwt-Button { font-size: 150%; }
+}}}
+
+All of the widgets created with the GWT toolkit will have a default class name, but a widget's style name can be set using [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/UIObject.html#setStyleName(java.lang.String) setStyleName()]. Static elements can have their class set in the HTML source code for your application.
+
+Another way to use stylesheets is to refer to a single widget.  For that, you would need to know the value of the `id` attribute for the widget or DOM element.  
+
+By default, neither the browser nor GWT creates default `id` attributes for widgets.  You must explicitly create an `id` for the elements you want to refer to in this manner, and you must insure that each "id" value is unique.  A common way to do this is to set them on static elements in your [DevGuideHostPage HTML host page]
+
+{{{
+  <div id="my-button-id"/>
+}}}
+
+To set the id for a GWT widget, retrieve its DOM Element and then set the `id` attribute as follows:
+
+{{{
+  Button b = new Button();
+  DOM.setElementAttribute(b.getElement(), "id", "my-button-id")
+}}}
+
+This would allow you to reference a specific widget in a stylesheet as follows:
+
+{{{
+$PP_OFF
+  #my-button-id { font-size: 100%; }
+}}}
+
+
+==Complex Styles==
+
+Some widgets have multiple styles associated with them. [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/MenuBar.html MenuBar], for example, has the following styles: 
+
+
+{{{
+$PP_OFF
+   .gwt-MenuBar { 
+       /* properties applying to the menu bar itself */ 
+   }
+   .gwt-MenuBar .gwt-MenuItem { 
+       /* properties applying to the menu bar's menu items */ 
+   }
+   .gwt-MenuBar .gwt-MenuItem-selected { 
+       /* properties applying to the menu bar's selected menu items */
+   }
+}}}
+
+In the above stylesheet code, there are two style rules that apply to menu items. The first applies to all menu items (both selected and unselected), while the second (with the -selected suffix) applies only to selected menu items. A selected menu item's style name will be set to `"gwt-MenuItem gwt-MenuItem-selected"`, specifying that both style rules will be applied. The most common way of doing this is to use [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/UIObject.html#setStyleName(java.lang.String) setStyleName] to set the base style name, then [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/UIObject.html#addStyleName(java.lang.String) addStyleName()] and [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/UIObject.html#removeStyleName(java.lang.String) removeStyleName()] to add and remove the second style name. 
+
+
+==CSS Files==
+
+
+There are two approaches for associating CSS files with your module:
+
+ * Using a `<link>` tag in the  [DevGuideHostPage host HTML page].
+ * Using the `<sytlesheet>` element in the [DevGuideModuleXml module XML file].
+
+You should use one approach or the other, but not both.
+
+ _ Tip: See the project [DevGuideProjectStructure recommended project structure] for the default location of the `<module>.css` file for your module created with [DevGuideApplicationCreator applicationCreator]. 
+ _
+
+
+===Including Stylesheets in the HTML Host Page===
+
+Typically, stylesheets are placed in a package that is part of your module's [DevGuideModules public path]. All you need to do to reference them is simply include a `<link>` to the stylesheet in your [DevGuideHostPage host page], such as:  
+
+{{{
+  <link rel="stylesheet" href="mystyles.css" type="text/css"/>
+}}}
+
+===Including Stylesheets in the Module XML file===
+
+
+Another way to include your stylesheet within your module is to use the `<stylesheet>` element in your [DevGuideModuleXml module XML file].  This uses [DevGuideAutomaticResourceInjection automatic resource inclusion] to bundle the `.css` file with your module.
+
+The difference between using a `<link>` tag in HTML and the `<stylesheet>` element in your module XML file is that with the mdoule XML file approach, the stylesheet will always follow your module, no matter which host HTML page you deploy it from.  
+
+Why does this matter?  Because if you create and share a module, it does not include a host page and therefore, you cannot guarantee the stylesheet's availability.  Automatic Resource inclusion solves this problem. If you do not care about sharing or re-using your module then you can just use the standard HTML link rel stuff in the host page.
+
+  _Tip: Use a unique name for the `.css` file with included resources to avoid collisions.  If you automatically include "styles.css" and share your module and someone puts it on a page that already has `styles.css` there will be problems.
+  _
+
+
+==Documentation==
+
+It is standard practice to document the relevant CSS style names for each widget class as part of its documentation comment. For a simple example, see [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/Button.html Button]. For a more complex example, see [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/MenuBar.html MenuBar]. 
+
+ _Tip: Currently there is not a single default or "recommended" GWT stylesheet. A common practice is to take the one from the Showcase or other sample projects as a starter. 
+ _

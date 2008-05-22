@@ -1,0 +1,17 @@
+#summary Filter files into and out of your public path and source path to avoid publishing files unintentionally.
+
+=Filtering Public and Source Packages=
+
+The [DevGuideModuleXml module XML format's] `<public>`, `<source>` and `<super-source>` elements supports certain attributes and nested elements to allow pattern-based inclusion and exclusion in the [DevGuideModules public path].  These elements follow the same rules as [http://ant.apache.org/ Ant]'s `FileSet` element. Please see the [http://ant.apache.org/manual/CoreTypes/fileset.html documentation] for `FileSet` for a general overview.  These elements do not support the full `FileSet` semantics. Only the following attributes and nested elements are currently supported: 
+
+  * The `includes` attribute
+  * The `excludes` attribute
+  * The `defaultexcludes` attribute
+  * The `casesensitive` attribute
+  * Nested `include` tags
+  * Nested `exclude` tags
+
+Other attributes and nested elements are not supported. 
+
+===Important===
+The default value of `defaultexcludes` is `true`. By default, the patterns listed [http://ant.apache.org/manual/dirtasks.html#defaultexcludes here] are excluded.

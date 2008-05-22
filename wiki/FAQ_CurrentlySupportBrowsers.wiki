@@ -1,0 +1,10 @@
+#summary What browsers does GWT currently support?
+
+= What browsers does GWT support? =
+
+As of 11/09/2007, GWT supports the following browsers:
+
+    *  Firefox 1.0, 1.5, 2.0
+    * Internet Explorer 6, 7
+    * Safari 2.0 (3.0 is looking good so far, too)
+    * Opera 9.0

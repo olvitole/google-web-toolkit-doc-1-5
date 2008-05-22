@@ -1,0 +1,61 @@
+#summary Use the RequestBuilder and other classes in the com.google.gwt.http.client package to build and send HTTP requests.
+
+=Making HTTP requests=
+
+GWT contains a set of [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/http/client/package-summary.html HTTP client classes] that allow your application to make generic HTTP requests.
+
+==Using HTTP in GWT==
+
+Making HTTP requests in GWT works much like it does in any language or framework, but there are a couple of important differences you should be aware of.
+
+First, because of the single-threaded execution model of most web browsers, long synchronous operations such as server calls can cause a !JavaScript application's interface (and sometimes the browser itself) to become unresponsive.  To prevent network or server communication problems from making the browser "hang", GWT allows only _asynchronous_ server calls.  When sending an HTTP request, the client code must register a callback method that will handle the response (or the error, if the call fails).  For more information about the exclusion of synchronous server connections, you may want to check out [FAQ_SynchronousServerConnection this FAQ article].
+
+Second, because GWT applications run as !JavaScript within a web page, they are subject to the browser's [http://en.wikipedia.org/wiki/Same_origin_policy same origin policy (SOP)].  SOP prevents client-side !JavaScript code from interacting with untrusted (and potentially harmful) resources loaded from other websites.  In particular, SOP makes it difficult (although not impossible) to send HTTP requests to servers other than the one that hosts your GWT application.  [FAQ_SOP This FAQ article] goes into more detail about SOP and its implication for GWT developers.  To see an example of SOP in action (and to learn how to work around it), check out the [GettingStartedJSON JSON/HTTP] chapter in the [GettingStarted Getting Started guide].
+
+==HTTP client types==
+
+To use the [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/http/client/package-summary.html HTTP types] in your application, you'll need to first inherit the GWT HTTP module by adding the following `<inherits>` tag to your [http://code.google.com/p/google-web-toolkit-doc-1-5/wiki/DevGuideModuleXml module XML file]:
+
+{{{
+<inherits name="com.google.gwt.http.HTTP" />
+}}}
+
+[http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/http/client/RequestBuilder.html RequestBuilder] is the core class you'll need for constructing and sending HTTP requests.  Its [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/http/client/RequestBuilder.html#RequestBuilder(com.google.gwt.http.client.RequestBuilder.Method,%20java.lang.String) constructor] has parameters for specifying the HTTP method of the request (GET, POST, etc.) and the URL (the [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/http/client/URL.html URL] utility class is handy for escaping invalid characters).  Once you have a !RequestBuilder object, you can use its methods to set the [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/http/client/RequestBuilder.html#setUser(java.lang.String) username], [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/http/client/RequestBuilder.html#setPassword(java.lang.String) password], and [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/http/client/RequestBuilder.html#setTimeoutMillis(int) timeout interval].  You can also set any number of  [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/http/client/RequestBuilder.html#setHeader(java.lang.String,%20java.lang.String) headers] in the HTTP request.
+
+Once the HTTP request is ready, call the server using the [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/http/client/RequestBuilder.html#sendRequest(java.lang.String,%20com.google.gwt.http.client.RequestCallback) sendRequest(String, RequestCallback)] method.  The [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/http/client/RequestCallback.html RequestCallback] argument you pass will handle the response or the error that results.  When a request completely normally, your [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/http/client/RequestCallback.html#onResponseReceived(com.google.gwt.http.client.Request,%20com.google.gwt.http.client.Response) onResponseReceived(Request, Response)] method is invoked.  Details of the response (for example, [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/http/client/Response.html#getStatusCode() status code], [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/http/client/Response.html#getHeaders() HTTP headers], and [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/http/client/Response.html#getText() response text]) can be retrieved from the [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/http/client/Response.html Response] argument.  Note that the onResponseReceived(Request, Response) method is called even if the HTTP status code is something other than 200 (success).  If the call _does not_ complete normally, the [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/http/client/RequestCallback.html#onError(com.google.gwt.http.client.Request,%20java.lang.Throwable) onError(Request, Throwable)] method gets called, with the second parameter describing the type error that occurred.
+
+As noted before, all HTTP calls in GWT are asynchronous, so the code following the call to [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/http/client/RequestBuilder.html#sendRequest(java.lang.String,%20com.google.gwt.http.client.RequestCallback) sendRequest(String, RequestCallback)] will be executed immediately, _not_ after the server responds to the HTTP request.  You can use the [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/http/client/Request.html Request] object that is returned from sendRequest(String, RequestCallback) to [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/http/client/Request.html#isPending() monitor the status] of the call, and [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/http/client/Request.html#cancel() cancel it] if necessary.
+
+Here's a brief example of making an HTTP request to a server:
+
+{{{
+import com.google.gwt.http.client.*;
+...
+
+String url = "http://www.myserver.com/getData?type=3";
+RequestBuilder builder = new RequestBuilder(RequestBuilder.GET, URL.encode(url));
+
+try {
+  Request request = builder.sendRequest(null, new RequestCallback() {
+    public void onError(Request request, Throwable exception) {
+       // Couldn't connect to server (could be timeout, SOP violation, etc.)     
+    }
+
+    public void onResponseReceived(Request request, Response response) {
+      if (200 == response.getStatusCode()) {
+          // Process the response in response.getText()
+      } else {
+        // Handle the error.  Can get the status text from response.getStatusText()
+      }
+    }       
+  });
+} catch (RequestException e) {
+  // Couldn't connect to server        
+}
+}}}
+
+For a complete example of using the HTTP client classes, see the [GettingStartedJSON JSON/HTTP] section in the [GettingStarted Getting Started] guide.
+
+==Processing the response==
+
+Once you receive the response from the server using [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/http/client/Response.html#getText() Response.getText()], it's up to you to process it.  If your response is encoded in JSON or XML, you can take advantage of GWT's built-in types to parse the data (see the topics [DevGuideJSON Working with JSON] and [DevGuideXML Working with XML], respectively). 

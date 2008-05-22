@@ -1,0 +1,15 @@
+=JSON Sample Application=
+
+http://google-web-toolkit-doc-1-5.googlecode.com/svn/wiki/SampleJSON.png
+
+Uses GWT's JavaScript Native Interface to speak to a JSON service on the server.
+
+[http://gwt.google.com/samples/JSON/JSON.html See Demo]
+
+GWT features used:
+
+ * [DevGuideUserInterface UI widgets]
+ * [DevGuideJavaScriptNativeInterface JSNI]
+ * JSON
+ 
+|| *[http://code.google.com/webtoolkit/download.html Download Source Code]* ||

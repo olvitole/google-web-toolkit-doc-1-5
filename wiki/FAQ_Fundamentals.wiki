@@ -1,0 +1,30 @@
+#summary Questions about overall GWT functionality.
+
+=Fundamentals=
+
+  * [FAQ_CurrentlySupportBrowsers What browsers does GWT support?]
+  
+  * [FAQ_NewBrowserSupport Will my app break when a new browser comes out?]
+  
+  * [FAQ_GWTModuleDefinition What is a GWT Module?]
+  
+  * [FAQ_TomcatRequiredOnServerForGWT Do I need to run Tomcat on my server to use GWT?]
+  
+  * [FAQ_ChangeLocationGWTApplicationFiles How do I change the location of my cache/nocache HTML files?]
+
+  * [FAQ_GWTApplicationFiles What's with all the cache/nocache stuff and weird filenames?]
+
+  * [FAQ_DeferredBindingDefinition What is Deferred Binding?]
+
+  * [FAQ_StandardsModeSupport Does GWT support standards-mode?]
+
+  * [FAQ_GWTWithServerSideTemplatingTool Can I use GWT with my favorite server-side templating tool?]
+
+  * [FAQ_GWTModuleInheritance How do I know which GWT modules I need to inherit?]
+
+  * [FAQ_SOP What is the Same Origin Policy, and how does it affect GWT?]
+
+  * [FAQ_EnableAssertions How do I enable assertions?]
+
+  * [FAQ_WontRunAfterUpgrade How do I get my project to run again after upgrading GWT?]
+  

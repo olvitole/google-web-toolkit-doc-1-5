@@ -1,0 +1,14 @@
+=Internationalization Sample Application=
+
+http://google-web-toolkit-doc-1-5.googlecode.com/svn/wiki/SampleInternationalization.png
+
+Demonstrates the ease of internationalizing an application built with GWT.
+
+[http://gwt.google.com/samples/I18N/I18N.html See Demo]
+
+GWT features used:
+
+ * [DevGuideUserInterface UI widgets]
+ * [DevGuideInternationalization Internationalization ]
+
+|| *[http://code.google.com/webtoolkit/download.html Download Source Code]* ||

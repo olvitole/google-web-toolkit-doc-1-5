@@ -1,0 +1,13 @@
+#summary Extending the basic StockWatcher application
+
+=Add More Features=
+
+Now that you've covered [GettingStartedBasics the basics] of GWT development, you can start exploring more specialized features that you'll likely need as you build more complex applications with GWT.
+
+ * [GettingStartedRPC Use remote procedure calls] Adding a call to a server using GWT-RPC.
+
+ * [GettingStartedI18n Internationalize] Translating the !StockWatcher user interface into another language.
+
+ * [GettingStartedJSON Add JSON support] Retrieving JSON data from a server via HTTP
+ 
+ * [GettingStartedJUnit Test with JUnit] Adding unit tests to the application.
