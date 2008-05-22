@@ -4,7 +4,7 @@
 
 The heart of GWT is a compiler that converts Java source into !JavaScript, transforming your working Java application into an equivalent !JavaScript application. Generally speaking, if your GWT application compiles and runs in [DevGuideHostedMode hosted mode] as you expect and GWT compiles your application into !JavaScript output without complaint, then your application will work the same way in a web browser as it did in hosted mode.
 
-The GWT compiler supports the vast majority of the Java language. The [DevGuideJavaRuntimeSupport GWT runtime library] emulates a relevant subset of the Java runtime library.  If a JRE class or method is not supported, the compiler will emit an error.
+The GWT compiler supports the vast majority of the Java language. The [DevGuideJavaCompatibility GWT runtime library] emulates a relevant subset of the Java runtime library.  If a JRE class or method is not supported, the compiler will emit an error.
 
 You can run the compiler with the name of the module you want to compile in one of the following manners:  
 

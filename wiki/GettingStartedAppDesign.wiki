@@ -36,7 +36,7 @@ The Developer Guide has more details on [DevGuideLanguageSupport Java language s
 
 The Java 2 Standard and Enterprise Edition libraries are quite large and many classes rely on functionality not available within the web browser.  Therefore, GWT supports only a subset of the Java platform contained in the `java.lang` and `java.util` packages.  The emulated GWT versions of these classes will generally behave just as they do in regular Java, with a few notable exceptions.  For example, the syntax of [http://java.sun.com/j2se/1.4.2/docs/api/java/util/regex/Pattern.html Java regular expressions] is not _quite_ the same as [http://developer.mozilla.org/en/docs/Core_JavaScript_1.5_Guide:Regular_Expressions JavaScript regular expressions], so when calling methods that use regular expressions (e.g., String's [http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html#replaceAll(java.lang.String,%20java.lang.String) replaceAll(String,String)] and [http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html#split(java.lang.String) split(String)] methods), make sure you only use regular expressions that have the same meaning in both Java and !JavaScript. 
 
-You can find out more about [DevGuideJavaRuntimeSupport Java runtime library support] in the Developer Guide.
+You can find out more about [DevGuideJavaCompatibility Java runtime library support] in the Developer Guide.
 
 ===Ensuring GWT compatibility===
 
