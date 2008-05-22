@@ -4,7 +4,7 @@
 
 Your application is sent across a network to a user, where it runs as !JavaScript inside his or her web browser. Everything that happens within your user's web browser is referred to as _client-side processing_. When you write client-side code that is intended to run in the web browser, remember that it ultimately becomes !JavaScript. Thus, it is important to use only libraries and Java language constructs that can be [DevGuideJavaToJavaScriptCompiler translated].
 
-==Module EntryPoint Class==
+==Module !EntryPoint Class==
 
 To begin writing a GWT module, you must create a subclass of the [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/core/client/EntryPoint.html EntryPoint] class.
 
