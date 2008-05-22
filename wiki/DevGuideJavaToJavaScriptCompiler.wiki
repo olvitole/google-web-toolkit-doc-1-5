@@ -12,7 +12,7 @@ You can run the compiler with the name of the module you want to compile in one 
  * If you used the 'applicationCreator' script to create your project, you can use the generated convenience shell script `<project-name>-compile`.
  * Use the _Compile/Browse_ button from inside of hosted mode.
 
-Once compilation completes sucessfully, directories will be created containing the JavaScript implementation of your project.  The compiler will create one directory for each module it compiles.
+Once compilation completes sucessfully, directories will be created containing the !JavaScript implementation of your project.  The compiler will create one directory for each module it compiles.
 
 {{{ 
 $PP_OFF
