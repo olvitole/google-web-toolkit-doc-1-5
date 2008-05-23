@@ -4,7 +4,7 @@
     * [OverviewWhyTranslate Why cross-compile?]
     * [OverviewHowWellDoesGWTWork Does GWT work well?]
     * [OverviewUsingGWT Cool things to try]
-  * [ReleaseNotes_1_5 What's new in 1.5?]
+  * What's new in 1.5?
     * [ReleaseNotes_1_5_ImportantNotes Important notes]
     * [ReleaseNotes_1_5_NewFeatures New features]
       * [ReleaseNotes_1_5_Compiler Compiler]
