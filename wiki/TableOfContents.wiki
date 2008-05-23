@@ -6,7 +6,7 @@
     * [OverviewUsingGWT Cool things to try]
   * What's new in 1.5?
     * [ReleaseNotes_1_5_ImportantNotes Important notes]
-    * [ReleaseNotes_1_5_NewFeatures New features]
+    * New features
       * [ReleaseNotes_1_5_Compiler Compiler]
       * [ReleaseNotes_1_5_JreEmulation JRE emulation]
       * [ReleaseNotes_1_5_Ui User interface]
