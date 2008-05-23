@@ -37,3 +37,11 @@ Specifics:
   * `HorizontalSplitPanel` is now bidi-compatible. Two methods have been added to support the adding of widgets to the panel that is at the "start of the line layout" and "end of the line layout". In RTL layout, the positioning of widgets with `HorizontalSplitPanel.add()` is right pane first, and then left pane. `setSplitPosition()` still sets the size of the left pane in RTL mode.
   * Added `TreeImagesRTL` and `DisclosureImagesRTL`, which contain be used to supply the widget images in RTL layout.
   * Modified `MenuBar` so that it accepts an `ImageBundle` as input to its constructor for its images. The default `ImageBundle` is `MenuImages` in LTR layout, and `MenuImagesRTL` in RTL layout.
+
+=== Accessibility support ===
+GWT 1.5 adds `com.google.gwt.user.client.ui.Accessibility` for setting of ARIA roles/states. GWT standard widgets now support ARIA roles/states, including `CustomButton`, `Tree`, `TreeItem`, `MenuBar`, `MenuItem`, `TabBar`, `TabPanel`. Note that ARIA support will only work in FireFox 3+, or FireFox2 with FireVox.
+
+Specifics:
+  * Tab indexes are properly set for all widgets that derive from `FocusWidget`.
+  * A tabindex of -1 is set on the GWT history and script IFRAMES so that they are not part of the tab cycle.
+  * Added `Document.createUniqueId()` as a general-purpose method for generating unique DOM ids. 
