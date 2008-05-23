@@ -2,24 +2,30 @@
 
 = New Features in GWT 1.5 =
 
-==== Support for Java 5 ====
-At long last, GWT support the modern Java 5 syntax, including
-  * Generics
-  * Enumerated types
-  * Annotations
-  * Enhanced for-loop syntax
-  * Static imports
+=== GWT Compiler ===
+==== Java 5 language support ====
+At long last, GWT supports the modern Java 5 syntax, including generics, enumerated types, annotations, enhanced for-loop syntax, and static imports.
 
-Taking full advantage of generics and annotations will require some changes in your code, as described in [ReleastNotes_1_5_ImportantNotes].
+Taking full advantage of generics and annotations will require some changes in your code, as described in [ReleastNotes_1_5_ImportantNotes the important notes] -- but you'll be glad you did.
 
-==== Compiler enhancements ====
+==== Method inlining ====
+The compiler now selectively inlines the bodies of both Java methods and JSNI methods. The net effect is that the contents of methods may be hoisted into their original call sites, removing function calls for trivial methods. This happens iteratively, so many levels of indirection can be automatically removed, often reducing code size and increasing performance.
+
+==== Proper emulation of primitive Java longs ====
+The Java `long` type now works correctly, giving you the full proper range of a 64-bit integer. Previously, due to JavaScript's lack of true 64-bit integral types, `long` was mapped to the integer range of `double`; the GWT compiler now compensates by generating smarter, more correct (albeiter slower) code. See the section on [DevGuideJavaCompatibility Java language compatibility] for more details.
+
+----
+
+=== JavaScript Native Interface (JSNI) ===
+==== Equivalence of null and undefined ====
+It's now okay to return `undefined` values from JSNI methods; such values are treated as equivalent to `null` in Java code. This keeps JSNI methods simpler, smaller, faster, and easier to inline.
 
 
+==== Widgets ====
 
-Widgets
 
+==== New low-level DOM classes ====
 
-New low-level DOM classes
 
 
 
