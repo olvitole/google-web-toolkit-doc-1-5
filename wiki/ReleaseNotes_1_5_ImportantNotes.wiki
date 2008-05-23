@@ -1,4 +1,4 @@
-#summary Important "big picture" information for users of GWT 1.5
+#summary Things that could surprise you if you've been using previous versions of GWT
 
 = Important notes =
 
