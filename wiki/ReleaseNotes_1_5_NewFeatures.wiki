@@ -1,3 +1,0 @@
-#summary There's a lot more than Java 5 language support!
-
-= New features =
