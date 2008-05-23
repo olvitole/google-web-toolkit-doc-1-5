@@ -8,8 +8,13 @@ If you have already been using GWT for a while, there are some changes in 1.5 th
 You probably have already been using a Java 5 SDK with GWT already, but if not, you'll need to make the switch now.
 
 === You'll want to start using generics and annotations... ==
-...especially for [DevGuideRemoteProcedureCalls RPC], [DevGuideInternationalization I18n], and [DevGuideImageBundles ImageBundle]. All the old javadoc-style metadata such as `@gwt.typeArgs` has been superceded by proper annotations. See the following annotation types for more information:
-  * 
+...especially for [DevGuideRemoteProcedureCalls RPC], [DevGuideInternationalization internationalization], and [DevGuideImageBundles image bundles]. All the old javadoc-style metadata such as `@gwt.typeArgs` has been superceded by proper annotations. Future versions of GWT will no longer honor the javadoc style of annotations, so expect to see a lot of log warnings  reminding you to update your code to use annotations. 
+
+For RPC, you'll need to replace `@gwt.typeArgs` in your javadoc with proper Java generics.
+
+For internationalization, there is a new, rich set of annotations. See the "Annotation Types" section for [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/i18n/client/package-summary.html Constants and Messages].
+
+For image bundles, replace `@gwt.resource` in your javadoc with the [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/ImageBundle.Resource.html @Resource] annotation.
 
 === Expect to use the -Xmx JVM flag ===
 The GWT compiler and hosted mode use more memory internally now. Some projects will need to increase JVM max memory to successfully compile, others may see improved compile times by increasing the limit. For example, `-Xmx512M` would set the heap max to 512 megabytes.
