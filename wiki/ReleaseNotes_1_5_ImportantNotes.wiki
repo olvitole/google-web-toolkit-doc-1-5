@@ -1,6 +1,6 @@
 #summary Things that you'll need to know if you've been using previous versions of GWT
 
-= Upgrade notes =
+= Important notes =
 
 If you have already been using GWT for a while, there are some changes in 1.5 that might affect your development. They aren't really breaking API changes, but they could trip you up, so we wanted to call them out clearly.
 
