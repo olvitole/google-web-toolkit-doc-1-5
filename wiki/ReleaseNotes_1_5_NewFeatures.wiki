@@ -1,0 +1,26 @@
+#summary There's a lot more than Java 5 language support!
+
+= New Features in GWT 1.5 =
+
+==== Support for Java 5 ====
+At long last, GWT support the modern Java 5 syntax, including
+  * Generics
+  * Enumerated types
+  * Annotations
+  * Enhanced for-loop syntax
+  * Static imports
+
+Taking full advantage of generics and annotations will require some changes in your code, as described in [ReleastNotes_1_5_ImportantNotes].
+
+==== Compiler enhancements ====
+
+
+
+Widgets
+
+
+New low-level DOM classes
+
+
+
+Remote Procedure Call (RPC)
