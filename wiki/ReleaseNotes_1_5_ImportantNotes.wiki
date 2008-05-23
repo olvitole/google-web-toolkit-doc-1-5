@@ -12,3 +12,6 @@ The GWT compiler and hosted mode use more memory internally now. Some projects w
 
 ==== Assertions are always on in hosted mode ====
 GWT client code running in hosted mode always runs with assertions enabled now. The GWT libraries are increasingly using assertions to validate proper use of API methods rather than explicitly checking parameters via if/then/throw sequences. Using assertions in this manner helps you catch runtime bugs in hosted mode without forcing overhead in [DevGuideWebMode web mode]. (You can choose to compile-in assertions in web mode, too, now. See [DevGuideModuleCompileScript the command-line] for `GWTCompiler` for more details.)
+
+==== Hosted mode works on OS X 10.5 and requires Safari 3.0 ====
+The same GWT distribution for Mac OS X now works on Tiger (10.4) and Leopard (10.5). The new implementation relies on using the system's available install of Safari 3.0 or later rather than bundling its own version of WebKit.
