@@ -1,6 +1,6 @@
 #summary How to prepare for and tearing down after JUnit test cases.
 
-= Setting up and tearing down !JUnit test cases that use GWT code =
+= Setting up and tearing down JUnit test cases that use GWT code =
 
 When using a test method in a JUnit [http://junit.sourceforge.net/javadoc/junit/framework/TestCase.html TestCase], any objects your test creates and leaves a reference to will remain active.  This could interfere with future test methods.  In the GWT 1.5 release, you can override two new methods to prepare for and/or clean up after each test method.
 
