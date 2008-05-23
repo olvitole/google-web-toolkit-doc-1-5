@@ -12,7 +12,7 @@ You probably have already been using a Java 5 SDK with GWT already, but if not, 
 
 For RPC, you'll need to replace `@gwt.typeArgs` in your javadoc with proper Java generics.
 
-For internationalization, there is a new, rich set of annotations. See the "Annotation Types" section for [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/i18n/client/package-summary.html Constants and Messages].
+For internationalization, there is a new, rich set of annotations. See the "Annotation Types Summary" section for [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/i18n/client/package-summary.html Constants and Messages].
 
 For image bundles, replace `@gwt.resource` in your javadoc with the [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/ImageBundle.Resource.html @Resource] annotation.
 
