@@ -1,0 +1,14 @@
+#summary User interface improvements in 1.5
+
+= User Interface =
+
+=== New sample: Showcase ===
+The new Showcase example replaces the KitchenSink as the all-inclusive demo of GWT widgets and features. Examples of almost all Widgets can be found in the Showcase, along with source code and style definitions that will allow users to copy the examples easily.  The Showcase illustrates locale support (including arabic, and RTL language), animations, and all of the new style themes.
+
+=== Widget animations ===
+Several widgets have optional animations to enhance user feedback: Tree, TabPanel, DisclosurePanel, PopupPanel, and MenuBar. You can enable an animation on any Widget that supports animations by called `someWidget.setAnimationEnabled(true)`.
+
+=== Default visual themes ===
+GWT now contains three optional visual themes that give widgets a pleasant default look and feel: Standard, Chrome, and Dark. The Standard theme uses subtle shades of blue paired with rounded corners, to give a simple, clean appearance that works well for many apps. The Chrome theme is similar to Standard but includes gray-scale gradients to give emphasize a minimalist visual style. The Dark theme uses dark colors and hard edges for a bold, unusual appearance. The Standard theme is used by default in GWT applications created with `applicationCreator`, but users can select a different theme by inheriting an alternative theme module in their module XML.
+
+Please note that, while these themes may serve as a useful starting point, they do not limit you in any way. You don't need to use them at all if you don't want to, and most applications will need to make significant additions or changes to the CSS introduced by these themes. The new Showcase sample lets you interactively explore the CSS styles associated with various widgets so that you can develop an intuition about how to use CSS to create exactly the style you want.
