@@ -13,6 +13,9 @@ It is now possible to subclass the GWT JavaScriptObject (JSO) class to create Ja
 === Method inlining ===
 The compiler now selectively inlines the bodies of both Java methods and [DevGuideJavaScriptNativeInterface JSNI] methods. The net effect is that the contents of methods may be hoisted into their original call sites, completely removing function call overhead for trivial methods. This optimization is performed recurisvely, so many levels of indirection can be automatically removed, often reducing code size and always improving performance.
 
+=== Assertion support ===
+For debugging purposes, the GWT compiler can be made to generate code that checks `assert` statements in web mode by passing "-ea" as an argument to the compiler. Note this is not the same as specifying "-ea" as a JVM flag, which causes the assertions in the GWT tools themselves to be checked.  By default, assertions are removed for production.
+
 === Equivalence of null and undefined ===
 It's now okay to return `undefined` values from JSNI methods; such values are treated as equivalent to `null` in Java code. This keeps JSNI methods simpler, smaller, faster, and easier to inline.
 
