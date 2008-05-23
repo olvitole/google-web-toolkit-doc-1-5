@@ -54,6 +54,33 @@ public void useMyConstants() {
 
 You don't need to worry about the Java implementation of your static string classes.  Static string initialization uses a [DevGuideDeferredBinding deferred binding] [DevGuideDeferredBindingGenerators generator] which allows the GWT compiler to take care of automatically generating the Java code necessary to implement your `Constants` subinterface depending on the [DevGuideSpecifyingLocale locale].
 
+==Using the Messages Interface==
+
+The [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/i18n/client/Messages.html Messages] interface allows you to subsitute parameters into messages and to even re-order those parameters for different locales as needed.    The format of the messages in the properties files follows the specification in Java [http://java.sun.com/j2se/1.5.0/docs/api/java/text/MessageFormat.html MessageFormat].  The interface you create will contain a java method with parameters matching those specified in the format string.
+
+Here is an example Messages property value:
+
+{{{
+$PP_OFF
+permissionDenied = Error {0}: User {1} Permission denied. 
+}}}
+
+The following code implements an alert dialog by substituting values into the message:
+
+{{{
+ public interface ErrorMessages extends Messages {
+   String permissionDenied(int errorCode, String username);
+ }
+ ErrorMessages msgs = GWT.create(ErrorMessages.class)
+  
+ void permissionDenied(int errorVal, String loginId) {
+   Window.alert(msgs.permissionDenied(errorVal, loginId));
+ }
+}}}
+
+
+ _ Note: Be advised that the rules for using quotes may be a bit confusing.  Refer to the [http://java.sun.com/j2se/1.5.0/docs/api/java/text/MessageFormat.html MessageFormat] javadoc for more details._
+
 
 ==The Benefits of Static String Internationalization==
 
