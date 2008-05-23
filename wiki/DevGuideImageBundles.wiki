@@ -11,7 +11,7 @@ An _image bundle_ is a construct used to improve application performance by redu
 
 ==Specifics==
 
-[DevGuideImageBundleMotivation !ImageBundles Make Using Images More Efficient] 
+[DevGuideImageBundleMotivation ImageBundles Make Using Images More Efficient] 
 Explians why Image Bundles are more efficient than using <IMG> HTML tags
 
 [DevGuideDefiningAndUsingImageBundle Creating and Using an Image Bundle]
@@ -19,4 +19,3 @@ Define an image bundle and use it in your application.
 
 [DevGuideImageBundleWithLocalization Image Bundles and Localization]
 Create locale-sensitive image bundles by using GWT's localization capabilities.
-
