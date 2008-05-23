@@ -8,7 +8,7 @@ GWT 1.5 supports the Java 5 syntax, including generics, enumerated types, annota
 Taking full advantage of generics and annotations will require some changes in your code (as described in [ReleaseNotes_1_5_ImportantNotes the important notes]), but you'll be glad you did.
 
 === !JavaScriptObject subclassing ===
-It is now possible to subclass the GWT JavaScriptObject (JSO) class to create Java "class overlays" onto arbitrary JavaScript objects. Thus, you can get the benefits of modeling JS objects as proper Java types (e.g. code completion, refactoring, inlining) without any additional memory or speed overhead. This capability makes it possible to use JSON structures optimally and serves as the basis for the all-new GWT DOM package.  
+It is now possible to subclass the GWT JavaScriptObject (JSO) class to create Java "class overlays" onto arbitrary JavaScript! objects. Thus, you can get the benefits of modeling JS objects as proper Java types (e.g. code completion, refactoring, inlining) without any additional memory or speed overhead. This capability makes it possible to use JSON structures optimally and serves as the basis for the all-new GWT DOM package.  
 
 === Method inlining ===
 The compiler now selectively inlines the bodies of both Java methods and [DevGuideJavaScriptNativeInterface JSNI] methods. The net effect is that the contents of methods may be hoisted into their original call sites, completely removing function call overhead for trivial methods. This optimization is performed recurisvely, so many levels of indirection can be automatically removed, often reducing code size and always improving performance.
