@@ -37,7 +37,7 @@ http://google-web-toolkit-doc-1-5.googlecode.com/svn/wiki/ArchitectureDiagram.pn
 
 The components, from bottom to top, are:
 
- * *GWT Java-to-!JavaScript Compiler* - The GWT [DevGuideJavaToJavaScriptCompiler Java-to-JavaScript compiler] translates the [http://java.sun.com/ Java] programming language to the [http://www.ecma-international.org/publications/standards/Ecma-262.htm !JavaScript] programming language. You use the GWT compiler to run your GWT applications in [DevGuideWebMode web mode].
+ * *GWT Java-to-!JavaScript Compiler* - The GWT [DevGuideJavaToJavaScriptCompiler Java-to-JavaScript compiler] translates the [http://java.sun.com/ Java] programming language to the [http://www.ecma-international.org/publications/standards/Ecma-262.htm JavaScript] programming language. You use the GWT compiler to run your GWT applications in [DevGuideWebMode web mode].
    
  * *GWT Hosted Web Browser* - The GWT Hosted Web Browser lets you run and execute your GWT applications in [DevGuideHostedMode hosted mode], where your code runs as Java in the Java Virtual Machine without compiling to !JavaScript. To accomplish this, the GWT browser embeds a special browser control (an Internet Explorer control on Windows or a Gecko/Mozilla control on Linux) with hooks into the JVM.
    
