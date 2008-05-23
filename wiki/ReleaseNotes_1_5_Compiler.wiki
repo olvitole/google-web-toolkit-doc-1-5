@@ -10,5 +10,8 @@ Taking full advantage of generics and annotations will require some changes in y
 === Method inlining ===
 The compiler now selectively inlines the bodies of both Java methods and [DevGuideJavaScriptNativeInterface JSNI] methods. The net effect is that the contents of methods may be hoisted into their original call sites, completely removing function call overhead for trivial methods. This optimization is performed recurisvely, so many levels of indirection can be automatically removed, often reducing code size and always improving performance.
 
+=== Equivalence of null and undefined ===
+It's now okay to return `undefined` values from JSNI methods; such values are treated as equivalent to `null` in Java code. This keeps JSNI methods simpler, smaller, faster, and easier to inline.
+
 === Long emulation ===
 The Java `long` type now works correctly, giving you the full proper range of a 64-bit integer. Previously, due to JavaScript's lack of true 64-bit integral types, `long` was mapped to the integer range of `double`; the GWT compiler now compensates by generating smarter, more correct (albeiter slower) code. See the section on [DevGuideJavaCompatibility Java language compatibility] for more details.
