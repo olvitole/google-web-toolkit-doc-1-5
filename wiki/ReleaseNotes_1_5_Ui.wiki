@@ -17,3 +17,9 @@ Please note that, while these themes may serve as a useful starting point, they 
 
 === Widget animations ===
 Several widgets have optional animations to enhance user feedback: Tree, TabPanel, DisclosurePanel, PopupPanel, and MenuBar. You can enable an animation on any Widget that supports animations by called `someWidget.setAnimationEnabled(true)`.
+
+=== Standards mode support ===
+GWT now supports HTML "standards mode" in addition to each browser's traditional "quirks mode". As of 1.5, `applicationCreator` generates HTML that uses standards mode. Note that in future GWT releases, support for quirks mode will be de-prioritized; new features and bugs will focus on perfecting standards mode behavior. When practical, you should switch your HTML to standards mode by including a tag like this at the top of your html file:
+{{{
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+}}}
