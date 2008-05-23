@@ -8,7 +8,7 @@ An all-new [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com
 Note that `com.google.gwt.dom.client.user.client.Element` now extends `dom.client.Element`. `dom.client.Element` is the preferred class to use for new code, and `user.client.Element` exists only for backwards compatibility. `UIObject` now generally uses the `dom.client.Element` instead of `user.client.Element`, although `setElement(user.client.Element)` and `getStyleElement()` have been preserved for backwards compatibility.
 
 === New sample: Showcase ===
-The new Showcase example replaces the KitchenSink as the all-inclusive demo of GWT widgets and features. Examples of almost all Widgets can be found in the Showcase, along with source code and style definitions that will allow users to copy the examples easily.  The Showcase illustrates locale support (including arabic, and RTL language), animations, and all of the new style themes.
+The new Showcase example replaces !KitchenSink as the all-inclusive demo of GWT widgets and features. Examples of almost all Widgets can be found in the Showcase, along with source code and style definitions that will allow users to copy the examples easily.  The Showcase illustrates locale support (including arabic, and RTL language), animations, and all of the new style themes.
 
 === Default visual themes ===
 GWT now contains three optional visual themes that give widgets a pleasant default look and feel: Standard, Chrome, and Dark. The Standard theme uses subtle shades of blue paired with rounded corners, to give a simple, clean appearance that works well for many apps. The Chrome theme is similar to Standard but includes gray-scale gradients to give emphasize a minimalist visual style. The Dark theme uses dark colors and hard edges for a bold, unusual appearance. The Standard theme is used by default in GWT applications created with `applicationCreator`, but users can select a different theme by inheriting an alternative theme module in their module XML.
@@ -16,10 +16,24 @@ GWT now contains three optional visual themes that give widgets a pleasant defau
 Please note that, while these themes may serve as a useful starting point, they do not limit you in any way. You don't need to use them at all if you don't want to, and most applications will need to make significant additions or changes to the CSS introduced by these themes. The new Showcase sample lets you interactively explore the CSS styles associated with various widgets so that you can develop an intuition about how to use CSS to create exactly the style you want.
 
 === Widget animations ===
-Several widgets have optional animations to enhance user feedback: Tree, TabPanel, DisclosurePanel, PopupPanel, and MenuBar. You can enable an animation on any Widget that supports animations by called `someWidget.setAnimationEnabled(true)`.
+Several widgets have optional animations to enhance user feedback: `Tree`, `TabPanel`, `DisclosurePanel`, `PopupPanel`, and `MenuBar`. You can enable an animation on any Widget that supports animations by called `someWidget.setAnimationEnabled(true)`.
 
 === Standards mode support ===
 GWT now supports HTML "standards mode" in addition to each browser's traditional "quirks mode". As of 1.5, `applicationCreator` generates HTML that uses standards mode. Note that in future GWT releases, support for quirks mode will be de-prioritized; new features and bugs will focus on perfecting standards mode behavior. When practical, you should switch your HTML to standards mode by including a tag like this at the top of your html file:
 {{{
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 }}}
+
+=== Bi-di support ===
+As demonstrated in the new Showcase sample, GWT now has significant support for right-to-left languages. If the active locale is a right-to-left language, the dir="rtl" attribute is added to the <html> element on the first call to `RootPanel.get(id)` or `RootPanel.get()`.
+
+Specifics:
+  * Added `HasDirection` interface. This interface allows those widgets that implement it to set their own directionality, thereby overriding the document's global directionality. This interface should only be implemented by leaf widgets (i.e. not by widgets that can contain other widgets). Curently, `TextArea`, `TextBox`, and Label implement this interface.
+  * Added utility class `com.google.gwt.i18n.client.BidiUtils`, which is used to set/get the directionality of an element.
+  * The default alignment of the `HorizontalPanel` is now "left" in LTR layout, and "right" in RTL layout.
+  * `DockPanel` defines two new direction constants - LINE_START and LINE_END. In an RTL environment, LINE_START corresponds to the right side of the `DockPanel`. In an LTR environment, LINE_START corresponds to the left side of the `DockPanel`.
+  * Tree is now bidi-compatible. Branches expand to the left when the layout is RTL. Also changed keyboard navigation: in an RTL layout, the left key expands branches, and the right key collapses them.
+  * Menu is now bidi-compatible. Submenus pop out to the left in an RTL layout. Also changed keyboard navigation so that the left key expands submenus in an RTL layout.
+  * `HorizontalSplitPanel` is now bidi-compatible. Two methods have been added to support the adding of widgets to the panel that is at the "start of the line layout" and "end of the line layout". In RTL layout, the positioning of widgets with `HorizontalSplitPanel.add()` is right pane first, and then left pane. `setSplitPosition()` still sets the size of the left pane in RTL mode.
+  * Added `TreeImagesRTL` and `DisclosureImagesRTL`, which contain be used to supply the widget images in RTL layout.
+  * Modified `MenuBar` so that it accepts an `ImageBundle` as input to its constructor for its images. The default `ImageBundle` is `MenuImages` in LTR layout, and `MenuImagesRTL` in RTL layout.
