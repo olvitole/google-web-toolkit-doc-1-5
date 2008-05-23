@@ -16,7 +16,7 @@ The Java `long` type now works correctly, giving you the full proper range of a 
 
 ----
 
-=== JavaScript Native Interface (JSNI) ===
+=== !JavaScript Native Interface (JSNI) ===
 ==== Equivalence of null and undefined ====
 It's now okay to return `undefined` values from JSNI methods; such values are treated as equivalent to `null` in Java code. This keeps JSNI methods simpler, smaller, faster, and easier to inline.
 
