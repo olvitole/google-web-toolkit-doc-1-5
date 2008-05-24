@@ -4,9 +4,9 @@
 
 === New JRE Classes ===
   * !StringBuilder
-  * javax.sql.Date
-  * javax.sql.Time
-  * javax.sql.Timestamp
+  * java.sql.Date
+  * java.sql.Time
+  * java.sql.Timestamp
   * Enum
   * !EnumSet
   * !EnumMap
