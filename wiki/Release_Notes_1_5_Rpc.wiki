@@ -23,6 +23,6 @@ the onFailure() throwable to StatusCodeException.
 
 Previous to 1.5, GWT required that any Serializable objects expected to be transferred through RPC must define a public no-arg constructor. These types can now define those constructors as private or protected and still be transferred through RPC.
 
-=== SerializableException now deprecated === 
+=== !SerializableException deprecated === 
 
 The SerializableException class is deprecated since java.lang.Throwable now implements Serializable.
