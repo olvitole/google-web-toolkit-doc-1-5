@@ -27,3 +27,7 @@ It's now okay to return `undefined` values from JSNI methods; such values are tr
 
 === Long emulation ===
 The Java `long` type now works correctly, giving you the full proper range of a 64-bit integer. Previously, due to !JavaScript's lack of true 64-bit integral types, `long` was mapped to the integer range of `double`; the GWT compiler now compensates by generating smarter, more correct (albeit slower) code. See the section on [DevGuideJavaCompatibility Java language compatibility] for more details.
+
+=== Introducing the new Linker subsystem ===
+
+Developers now have full control over the packaging and bootstrap sequence of a GWT module thanks to the new Linker subsystem.
