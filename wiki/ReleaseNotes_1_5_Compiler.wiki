@@ -1,6 +1,6 @@
 #summary Compiler enhancements
 
-= Compiler and Hosted Mode =
+= Compiler, Hosted Mode & Linkers =
 
 === Java 5 language support! ===
 GWT 1.5 supports the Java 5 syntax, including generics, enumerated types, annotations, enhanced for-loop syntax, and static imports.
