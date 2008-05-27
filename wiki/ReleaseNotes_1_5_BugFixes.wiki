@@ -12,4 +12,5 @@
 
 === Known bugs ===
 
-  * StackPanel in standards mode: Currently, the StackPanel has an issue in IE in standards mode that makes it difficult to set the height of a StackPanel reliably.  The problem is that the height of the visible TD cell is set to 100%, which effectively means "take whatever space is left over" in all browsers (including IE) in standards mode.  However, tables cannot act as layout parents in IE in standards mode, so the visible TD cell ends up taking the height of the body or the parent of the StackPanel. This is an issue that is targeted for priority attention for the next release of 1.5.
+  * !StackPanel in standards mode 
+  Currently, the !StackPanel has an issue in IE in standards mode that makes it difficult to set the height of a !StackPanel reliably.  The problem is that the height of the visible TD cell is set to 100%, which effectively means "take whatever space is left over" in all browsers (including IE) in standards mode.  However, tables cannot act as layout parents in IE in standards mode, so the visible TD cell ends up taking the height of the body or the parent of the !StackPanel. This is an issue that is targeted for priority attention for the next release of 1.5.
