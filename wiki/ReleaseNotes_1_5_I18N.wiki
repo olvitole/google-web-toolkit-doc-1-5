@@ -4,7 +4,7 @@
 
 === Bi-directional support for standard widgets ===
 
-The standard GWT widgets have been improved to support bidirectionality, as shown in the Showcase application. This represents significant support for right-to-left languages. See Bi-di support section in [ReleaseNotes_1_5_Ui User interface improvements] for more details.
+The standard GWT widgets have been improved to support bidirectionality, as shown in the Showcase application. This represents significant support for right-to-left languages. See the Bi-di support section in [ReleaseNotes_1_5_Ui User interface improvements] for more details.
 
 === Support for plural forms, including rules for 99 languages ===
 
