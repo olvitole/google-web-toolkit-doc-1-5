@@ -3,16 +3,15 @@
 = Miscellaneous Features & Improvements =
 
   * * Application creator now creates a default css file * 
-  If your application's name is MyApp, then the default css file will be named MyApp.css.
+  If your application's name is !MyApp, then the default css file will be named !MyApp.css.
 
   * *Binary only annotations can be used in translatable source *
   Of course, this is in addition source only annotations.
 
   * * Generators *
     * Expose Java 1.5 constructs like annotations and generics to Generator authors
-    * Generators can now mark Artifacts created by GeneratorContext.tryCreateResource() as being private; these files will be emitted into the module's auxiliary directory. This is a change that ties into the new Linker subsystem introduced in 1.5.
-    * Generators can now send custom Artifact instances to the Linker stack via
-GeneratorContext.commitArtifact(). This change also ties into the new Linker subsystem.
+    * Generators can now mark Artifacts created by !GeneratorContext.tryCreateResource() as being private; these files will be emitted into the module's auxiliary directory. This is a change that ties into the new Linker subsystem introduced in 1.5.
+    * Generators can now send custom Artifact instances to the Linker stack via !GeneratorContext.commitArtifact(). This change also ties into the new Linker subsystem.
 
   * * New <rename-to> module XML tag * 
 The module XML file now supports an optional attribute "rename-to" which will change the name of the module produced by the compiler. This allows you to do such things as create drop-in replacements for your module by creating various working modules that can be renamed to your standard module name.
