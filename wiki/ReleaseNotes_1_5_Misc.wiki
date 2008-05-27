@@ -34,9 +34,7 @@
   * Benchmarks have moved out of com.google.gwt.junit to com.google.gwt.benchmarks;
 existing client code will need to reorganize imports to the correct package. The Range class has been completely removed in favor of java.lang.Iterable.
   * The setUp/tearDown methods have now been replaced by [DevGuideJUnitSetUp gwtSetUp/gwtTearDown].
-  * New -manual web mode testing allows you to target the running test with any
-browser of your choice. See the [  * We implemented -manual web mode to allow you to target the running test with any
-browser (there should be some 1.5 doc Eric wrote to link to). Running your test in manual mode section] in the developer guide for more details.
+  * New -manual web mode testing allows you to target the running test with any browser of your choice. See the [DevGuideJUnitCreation Running your test in manual mode section] in the developer guide for more details.
 
 
 === Updated Locale-specific components for standards compliance ===
