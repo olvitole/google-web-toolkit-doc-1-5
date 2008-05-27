@@ -11,6 +11,7 @@ A commmand line tool that generates an [http://ant.apache.org/ Ant] buildfile or
 ||   `-out`  ||  The directory to write output files into (defaults to current) ||  
 ||   `-overwrite`  ||  Overwrite any existing files ||  
 ||   `-ignore`  ||  Ignore any existing files; do not overwrite ||  
+||   `-addToClassPath` ||  Adds extra elements to the class path of files in the skeleton. ||
 
 
 ==Example==
