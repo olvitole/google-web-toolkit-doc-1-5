@@ -249,6 +249,10 @@ Here are the CSS rules to define each of the style changes we just described.
 
 {{{
 $PP_OFF
+body {
+  padding: 10px;
+}
+
 body, .watchList {
   font-family: arial, sans-serif;
   font-size: small;
