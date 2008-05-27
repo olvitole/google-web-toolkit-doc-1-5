@@ -1,5 +1,5 @@
 ﻿#summary table of contents for GWT documentation
-  * [Overview Overview]
+  * [Overview GWT Overview]
     * [OverviewFeatures Features]
     * [OverviewWhyTranslate Why cross-compile?]
     * [OverviewHowWellDoesGWTWork Does GWT work well?]
