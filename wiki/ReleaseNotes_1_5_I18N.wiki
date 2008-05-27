@@ -8,7 +8,7 @@ The standard GWT widgets have been improved to support bidirectionality, as show
 
 === Support for plural forms, including rules for 99 languages ===
 
-By specifying plural rules for your internationalized messages, and providing the plural form in respective locale properties files, the appropriate plural form will be chosen based on the message parameter value. For example, let's say we wanted to apply to plural form to an English message. Using the new support for plural forms, we could define the following:
+By specifying plural rules for your internationalized messages, and providing the plural form in respective locale properties files, the appropriate plural form will be chosen based on the message parameter's value. For example, let's say we wanted to apply to plural form to an English message. Using the new support for plural forms, we could define the following:
 
 {{{
 public interface MyMessages extends Messages {
