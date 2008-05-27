@@ -29,7 +29,7 @@ The system will automatically choose the correct plural form based on the count.
 
 === Support for integration with external translation tools ===
 
-Since GWT 1.5 supports and honors Java 1.5 syntax, as a result you can use Java annotations for text or metadata representations which can be adapted from general purpose use to i18n purposes. Combining this with the newly introduced Linker subsystem that developers can extend to generate any kind of output during compilation, the infrastructure to work with external translation tools is in place and should allow for easy integration.
+Since GWT 1.5 supports and honors Java 1.5 syntax, you can use Java annotations for text or metadata representations which can be adapted from general purpose use to i18n purposes. Combining this with the newly introduced Linker subsystem that developers can extend to generate any kind of output during compilation, the infrastructure to work with external translation tools is in place and should allow for easy integration.
 
 === New !LocaleInfo class lets you access information about the client locale ===
 
