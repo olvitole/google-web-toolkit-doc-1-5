@@ -1,6 +1,6 @@
 #summary Bug fixes and enhancements in GWT 1.5
 
-== Bug fixed and enhancements in GWT 1.5 ==
+== Bug fixes and enhancements in GWT 1.5 ==
 
 For a full list of bug fixes and enhancements that have went into GWT 1.5, check out the links below:
 
