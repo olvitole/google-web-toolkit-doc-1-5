@@ -1,10 +1,10 @@
-#summary Does the GWT 1.4 Compiler Need an X11 Window in Linux?
+#summary Does the GWT Compiler Need an X11 Window in Linux?
 
-= Does the GWT 1.4 Compiler Need an X11 Window in Linux? =
+= Does the GWT Compiler Need an X11 Window in Linux? =
 
 No, the GWT compiler can run "headless" (i.e. accessing the AWT library without needing to load a Graphics Environment Window).
 
-The reason why you might run into the problem in the first place is because the new ImageBundle feature in GWT 1.4 triggers the GWT compiler to connect to an X11 Graphics Environment Window at compile time. If you don't have a DISPLAY environment variable set, it will complain about not being able to connect to an X11 window with the following error message `java.lang.InternalError: Can't connect to X11 window server using ':0.0' as the value of the DISPLAY variable.`
+The reason why you might run into the problem in the first place is because the  [DevGuideImageBundles ImageBundle] feature triggers the GWT compiler to connect to an X11 Graphics Environment Window at compile time. If you don't have a DISPLAY environment variable set, it will complain about not being able to connect to an X11 window with the following error message `java.lang.InternalError: Can't connect to X11 window server using ':0.0' as the value of the DISPLAY variable.`
 
 Although you may not be using the !ImageBundle explicitly in your client code, you may still encounter this error message. The reason why is because GWT uses the !ImageBundle internally for widgets like the Tree widget to further optimize the number of HTTP roundtrips for images and speed up your web application. This means if you're using any widgets that use !ImageBundle in their underlying implementations, the GWT compiler will search for the DISPLAY environment variable and try to connect to an X11 Graphics Window.
 
@@ -17,6 +17,6 @@ Ant:
 Add the {{{<jvmarg value="-Djava.awt.headless=true"/>}}} element to your GWT compilation build target.
 
 Eclipse:
-In your Run Configuration window, select the 'Arguments' tab and enter {{{-Djava.awt.headless=true}}} in the 'VM arguments' section.
+In your Run Configuration window, select the _Arguments_ tab and enter {{{-Djava.awt.headless=true}}} in the _VM arguments_ section.
 
 With this configuration, GWT will be running in headless mode and won't complain about an X11 window on your next GWT compilation. 
