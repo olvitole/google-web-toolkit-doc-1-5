@@ -9,6 +9,10 @@
   * * Call Java constructors from JSNI code *
   Java constructors can now be called directly from JSNI via the ::new method reference.
 
+  * * Improvements or changes in usage to JRE classes *
+      * Use `Duration.currentTimeMillis()` instead of `System.currentTimeMillis()`, since long is now emulated.
+      * `Arrays.asList()` is a really efficient array-backed collection; if you already have an array sitting around, it allows you to avoid the linear-time copy of all the elements.
+
   * * Application creator now creates a default css file * 
   If your application's name is !MyApp, then the default css file will be named !MyApp.css.
 
