@@ -29,7 +29,7 @@ As demonstrated in the new Showcase sample, GWT now has significant support for 
 
 Specifics:
   * User.gwt.xml now inherits the I18N module because standard widgets now support bidi.
-  * Added `HasDirection` interface. This interface allows those widgets that implement it to set their own directionality, thereby overriding the document's global directionality. This interface should only be implemented by leaf widgets (i.e. not by widgets that can contain other widgets). Curently, `TextArea`, `TextBox`, and Label implement this interface.
+  * Added `HasDirection` interface. This interface allows those widgets that implement it to set their own directionality, thereby overriding the document's global directionality. This interface should only be implemented by leaf widgets (i.e. not by widgets that can contain other widgets). Curently, `TextArea`, `TextBox`, and `Label` implement this interface.
   * Added utility class `com.google.gwt.i18n.client.BidiUtils`, which is used to set/get the directionality of an element.
   * The default alignment of the `HorizontalPanel` is now "left" in LTR layout, and "right" in RTL layout.
   * `DockPanel` defines two new direction constants - LINE_START and LINE_END. In an RTL environment, LINE_START corresponds to the right side of the `DockPanel`. In an LTR environment, LINE_START corresponds to the left side of the `DockPanel`.
