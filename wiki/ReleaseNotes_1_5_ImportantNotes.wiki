@@ -16,7 +16,7 @@ For internationalization, there is a new, rich set of annotations. See the "Anno
 
 For image bundles, replace `@gwt.resource` in your javadoc with the [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/ImageBundle.Resource.html @Resource] annotation.
 
-Although we strongly suggest that you update your project code to use the standard Java 1.5 style annotations, you can use the new -Dgwt.nowarn.metadata flag to turn off warnings about using deprecated metadata annotations if you're hard pressed to update your code. If your application uses a lot of metadata, this flag might help improve compilation and hosted mode startup times since generating loads of warning messages can be costly. The right solution, however, is to update your code.
+Although we strongly suggest that you update your project code to use the standard Java 1.5 style annotations, you can use the new `-Dgwt.nowarn.metadata` flag to turn off warnings about using deprecated metadata annotations if you're hard pressed to update your code. If your application uses a lot of metadata, this flag might help improve compilation and hosted mode startup times since generating loads of warning messages can be costly. The right solution, however, is to update your code.
 
 === Expect to use the -Xmx JVM flag ===
 The GWT compiler and hosted mode use more memory internally now. Some projects will need to increase JVM max memory to successfully compile, others may see improved compile times by increasing the limit. For example, `-Xmx512M` would set the heap max to 512 megabytes.
@@ -25,4 +25,4 @@ The GWT compiler and hosted mode use more memory internally now. Some projects w
 GWT client code running in hosted mode always runs with assertions enabled now. The GWT libraries are increasingly using assertions to validate proper use of API methods rather than explicitly checking parameters via if/then/throw sequences. Using assertions in this manner helps you catch runtime bugs in hosted mode without forcing overhead in [DevGuideWebMode web mode]. (You can choose to compile-in assertions in web mode, too, now. See [DevGuideModuleCompileScript the command-line] for `GWTCompiler` for more details.)
 
 === Hosted mode works on OS X 10.4 and 10.5; requires Safari 3.0 ===
-The same GWT distribution for Mac OS X now works on Tiger (10.4) and Leopard (10.5). GWT 1.5 relies on Safari 3.0 or later and no longer includes a custom version of WebKit.
+The same GWT distribution for Mac OS X now works on Tiger (10.4) and Leopard (10.5). The new implementation relies on using the system's available install of Safari 3.0 or later rather than bundling its own version of !WebKit.
