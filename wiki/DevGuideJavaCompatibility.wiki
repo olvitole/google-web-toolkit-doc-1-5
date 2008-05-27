@@ -12,7 +12,7 @@ It is important to remember that the target language of your GWT application is 
 
   *   * Intrinsic types*: No big surprises here. `byte`, `char`, `short`, `int`, `float`, `double`, `Object`, `String`, arrays, user-defined classes, etc. are all supported as you would hope. There is one surprise regarding the `long` type: !JavaScript has no 64-bit integral type, so `long` needs special consideration. Prior to GWT 1.5, the `long` type was was simply mapped to the integral range of a 64-bit !JavaScript _floating-point_ value, giving `long` variables an actual  range less than the full 64 bits. As of GWT 1.5, `long` works correctly over the entire 64-bit range.
 
-  * * Long emulation in GWT 1.5 or later *:  Since !JavaScript has no 64-bit integral type, the type `long` is supported via special math emulation code emitted by the GWT compiler. Behind the scenes, `long` values are represented as pairs of 32-bit integers, which limits your ability to use them within [DevGuideJavaScriptNativeInterface JSNI code] because the native JavaScript math operators do not recognize them.
+  * * Long emulation in GWT 1.5 or later *:  Since !JavaScript has no 64-bit integral type, the type `long` is supported via special math emulation code emitted by the GWT compiler. Behind the scenes, `long` values are represented as pairs of 32-bit integers, which limits your ability to use them within [DevGuideJavaScriptNativeInterface JSNI code] because the native !JavaScript math operators do not recognize them.
 
   *   * Exceptions*: `try`, `catch`, `finally` and user-defined exceptions are supported as normal, although `Throwable.getStackTrace()` is not meaningfully supported in web mode.
 
