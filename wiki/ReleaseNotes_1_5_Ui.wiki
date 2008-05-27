@@ -36,7 +36,7 @@ Specifics:
   * Tree is now bidi-compatible. Branches expand to the left when the layout is RTL. Keyboard navigation is now bidi-compatible: in an RTL layout, the left key expands branches, and the right key collapses them.
   * Menu is now bidi-compatible. Submenus pop out to the left in an RTL layout. Keyboard navigation has been changed so that the left key expands submenus in an RTL layout.
   * `HorizontalSplitPanel` is now bidi-compatible. Two methods have been introduced to support adding widgets to panels positioned at the "start of the line layout", and the "end of the line layout". `HorizontalSplitPanel.add()` has been changed so that widgets are added in line layout order. For example, in RTL layout, the first widget that is added via `HorizontalSplitPanel.add()` will be placed in the right pane, and the second will be placed in the left pane. `setSplitPosition()` still sets the size of the left pane in RTL mode.
-  * Added `TreeImagesRTL` and `DisclosureImagesRTL`, which contain be used to supply the widget images in RTL layout.
+  * Added `TreeImagesRTL` and `DisclosureImagesRTL`, which are used to supply the widget images in RTL layout.
   * Modified `MenuBar` so that it accepts an `ImageBundle` as input to its constructor for its images. The default `ImageBundle` is `MenuImages` in LTR layout, and `MenuImagesRTL` in RTL layout.
 
 === Accessibility support ===
