@@ -2,7 +2,7 @@
 
 = Miscellaneous Features & Improvements =
 
-  * * The GWT class has two new convenience methods *
+=== The GWT class has two new convenience methods ===
       * `GWT.getVersion()`: reports what version of GWT was used to compile your application.
       * `GWT.isClient()`: can be used to detect whether shared code is running in the browser (as opposed to on a server).
 
