@@ -17,19 +17,27 @@ Thus, you have two options for constructing your GWT application's interface.  Y
 For !StockWatcher, we're going to use placeholder elements in our HTML.  Go ahead and open the host page file (`src/com/google/gwt/sample/stockwatcher/public/StockWatcher.html`) and replace its contents with the following HTML:
 
 {{{
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" 
+"http://www.w3.org/TR/html4/loose.dtd">
+
 <html>
   <head>
-  <title>StockWatcher</title>
-    <script language='javascript' src='com.google.gwt.sample.stockwatcher.StockWatcher.nocache.js'></script>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>StockWatcher</title>
+    <script type="text/javascript" language="javascript" src="com.google.gwt.sample.stockwatcher.StockWatcher.nocache.js"></script>
   </head>
+
   <body>
     <h1>Stock Watcher</h1>
     <div id="stockList"></div>
   </body>
 </html>
+
 }}}
 
 This code defines the static content of the page.  As in normal HTML, the `<title>` tag is just the title of our page that appears on the browser window or tab.  The `<script>` tag references the !JavaScript source code that GWT will generate.  Finally, the `<div>` tag will contain our GWT widgets.  We set its `id` attribute so we can access it from GWT via a [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/RootPanel.html RootPanel].
+
+In addition, the HTML 4.01 Transitional DOCTYPE declaration at the top of the file sets the rendering engine to "Standards Mode", which provides better cross browser compatibility.  If you remove this line, the page will be rendered in "Quirks Mode", which means that all of the old browser bugs will still be present.  In some cases, you may choose to use "Quirks Mode" if you are integrating with an application that relies on some of the browser specific bugs being present, but for now, we will stick with "Standards Mode".
 
 ==Panels and Widgets==
 
