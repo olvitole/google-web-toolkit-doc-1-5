@@ -32,7 +32,7 @@ The first thing you'll probably notice are all the filenames containing GUID's. 
 
 Besides browser detection, deferred binding can also generate customized versions of your application for any number of other variables.  One very common example is internationalization.  With deferred binding, GWT generates a separate implementation of the application for each language, so for example, an English speaker doesn't have to download the French text (and vice versa).  If you're interested, we'll actually be  [GettingStartedI18n internationalizing StockWatcher] later in the Getting Started guide.
 
-In the output directory you'll also notice our project's static resources, including the `StockWatcher.html` [DevGuideHostPage host page], the `StockWatcher.css` file and the `images` subdirectory containing the Google Code logo. 
+In the output directory you'll also notice our project's static resources, including the `StockWatcher.html` [DevGuideHostPage host page], the `StockWatcher.css` file, the `images` subdirectory containing the Google Code logo, and the `gwt` subdirectory containing the files used by the GWT standard visual theme.
 
 ==Deploying !StockWatcher==
 
