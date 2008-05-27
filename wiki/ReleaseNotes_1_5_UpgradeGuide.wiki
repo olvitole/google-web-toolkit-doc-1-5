@@ -23,12 +23,12 @@ If your application checks out on all of the above points and you're still ready
     * [http://google-web-toolkit.googlecode.com/files/gwt-mac-1.5.0.tar.gz GWT 1.5 RC for Mac (10.4 and 10.5 supported)]
     * [http://google-web-toolkit.googlecode.com/files/gwt-linux-1.5.0.tar.bz2 GWT 1.5 RC for Linux (i386 GTK2)]
 
-  2. *Update your GWT project build path* to use the latest GWT JARs. This includes `gwt-user.jar`, `gwt-dev-<platform>.jar` and `gwt-servlet.jar` if your application uses GWT-RPC.
+2. *Update your GWT project build path* to use the latest GWT JARs. This includes `gwt-user.jar`, `gwt-dev-<platform>.jar` and `gwt-servlet.jar` if your application uses GWT-RPC.
 
-  3. *Update any run configurations or application compile and shell scripts* to include the latest JARs in the classpath (same JARs as mentioned in step 2).
+3. *Update any run configurations or application compile and shell scripts* to include the latest JARs in the classpath (same JARs as mentioned in step 2).
 
-  4. *Run a GWT compilation* over your project to generate the latest GWT application files for your project.
+4. *Run a GWT compilation* over your project to generate the latest GWT application files for your project.
 
-  5. *Deploy the latest GWT application files* to your web server.
+5. *Deploy the latest GWT application files* to your web server.
 
 Any problems while upgrading? As always, let us know on the [http://groups.google.com/group/Google-Web-Toolkit GWT Developer Forum] and our great community or GWT team members will get back to you to make sure the upgrade process detailed in this guide is accurate and works for our users.
