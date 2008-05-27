@@ -24,7 +24,7 @@
 
  * *native methods* - Java methods that have a body implemented in !JavaScript.  The GWT compiler creates interface code to the Java method's parameters and return values.
 
- * *overlay types* - A Java class that directly models a JavaScript object, giving you the development-time benefits of static types for JavaScript but without adding any memory or speed costs at runtime.
+ * *overlay types* - A Java class that directly models a !JavaScript object, giving you the development-time benefits of static types for !JavaScript without adding any memory or speed costs at runtime.
 
  * *public path* - A directory or list of directories that contains static files that should be served by the web server.  All files in the static path are copied to the same directory as the compiled !JavaScript output from the GWT compiler.  If no public path is specified in the [DevGuideModuleXml module XML file], the default public path is `<module name>/public`.
 
