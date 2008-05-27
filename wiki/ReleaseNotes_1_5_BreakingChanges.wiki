@@ -3,23 +3,20 @@
 = Breaking changes in GWT 1.5 =
 
   * * UI Library changes *:
-    * `UIObject.setElement` has been changed back to its pre-GWT 1.4 behavior - it is
-now callable only once. For those widgets that need to replace their DOM element
-once it has been set, the protected method `replaceElement(elem)` in `UIObject` can
-be used.
-    * `Composite.getElement()` has been removed.
-    * `Composite.onBrowserEvent()` is now invoked properly when `sinkEvents` is called.
-    * `HTMLPanel.add(Widget, id)` is a much faster operation, because it now relies on
-calling the native `document.getElementById(id)` method.
-    * HTMLPanel has two new methods - `getElementById(id)`, and `addAndReplaceElement(widget, id)`.
+    * UIObject.setElement has been changed back to its pre-GWT 1.4 behavior - it is now callable only once. For those widgets that need to replace their DOM element once it has been set, the protected method replaceElement(elem) in UIObject can be used.
+    * Composite.getElement() has been removed.
+    * Composite.onBrowserEvent() is now invoked properly when sinkEvents is called.
+    * HTMLPanel.add(Widget, id) is a much faster operation, because it now relies on
+calling the native document.getElementById(id) method.
+    * HTMLPanel has two new methods - getElementById(id), and addAndReplaceElement(widget, id).
     * GWT Widgets now sink their events lazily: widgets no longer routinely sink their events eagerly. Instead, the event is sunk the first time a listener is added to the widget. So subclasses which relied on eagerly sunk events will now have to manually sink the events they depend upon.
-    * The `Tree` widget no longer uses leaf images by default. Must use the `Tree(TreeImages)` constructor to get leaf images.
+    * The Tree widget no longer uses leaf images by default. Must use the Tree(TreeImages) constructor to get leaf images.
     * RichText.gwt.xml no longer inherits the I18N module.
-    * `PasswordTextBox` now inherits from `TextBox` rather than `TextBoxBase`.
+    * PasswordTextBox now inherits from TextBox rather than TextBoxBase.
 
   * * GWT Bootstrap File changes *:
-    * In GWT 1.3, the bootstrap script that needed to be included in a host HTML page to load up your GWT application was the generated `gwt.js` file.  In GWT 1.4, a new bootstrapping sequence was introduced where a `module.nocache.js` was the new bootstrap file, and `gwt.js`, while generated, was deprecated. In GWT 1.5, the compiler no longer generates the `gwt.js` file and strictly supports the 1.4 bootstrap model.
-    * The cross-site bootstrap (`module-xs.nocache.js` file) is no longer produced by default; this has been replaced with the "xs" linker. In order to generate cross-site output, you must add the <add linker name="xs" /> tag in your module XML file to invoke the xs linker.
+    * In GWT 1.3, the bootstrap script that needed to be included in a host HTML page to load up your GWT application was the generated gwt.js file.  In GWT 1.4, a new bootstrapping sequence was introduced where a module.nocache.js was the new bootstrap file, and gwt.js, while generated, was deprecated. In GWT 1.5, the compiler no longer generates the gwt.js file and strictly supports the 1.4 bootstrap model.
+    * The cross-site bootstrap (module-xs.nocache.js file) is no longer produced by default; this has been replaced with the "xs" linker. In order to generate cross-site output, you must add the <add linker name="xs" /> tag in your module XML file to invoke the xs linker.
 
   * * Compiler, Hosted Mode and Generator changes *:
     * Generators cannot tryCreateResource() if a resource by that name is on your project's public path.
@@ -31,7 +28,7 @@ calling the native `document.getElementById(id)` method.
     * Strings cannot be marshalled as JSOs anymore
     * Java longs are now emulated in Javascript. Direct access to longs from JSNI code is
 now forbidden.
-    * `JSONObject.get()` no longer checks `hasOwnProperty`.
+    * JSONObject.get() no longer checks hasOwnProperty.
 
   * * JUnit and Benchmark changes *:
        * Benchmarking subsystem moved packages from com.google.gwt.junit to com.google.gwt.benchmarks.
