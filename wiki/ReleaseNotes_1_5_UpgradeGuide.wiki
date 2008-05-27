@@ -1,0 +1,7 @@
+#summary GWT 1.5 Upgrade Guide
+
+= How to upgrade to GWT 1.5 =
+
+Indeed, GWT 1.5 is the real deal, so it's no surprise that you'll be wanting to make the move to 1.5 and reap the benefits for your GWT applications. However, before you get on your way to making the move, there are a number of [ReleaseNotes_1_5_ImportantNotes Important Notes that you should read and understand before upgrading your applications.
+
+Specifically:
