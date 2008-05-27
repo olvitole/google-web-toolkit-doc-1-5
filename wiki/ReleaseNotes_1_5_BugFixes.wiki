@@ -1,11 +1,9 @@
-#summary Bug fixes in GWT 1.5
+#summary Bug fixes and enhancements in GWT 1.5
 
-= Bug Fixes in GWT 1.5 =
+== Bug fixed and enhancements in GWT 1.5 ==
 
-  * Fixed bug in Arrays.deepHashCode.
+For a full list of bug fixes and enhancements that have went into GWT 1.5, check out the links below:
 
-  * History tokens more consistently escaped (characters were needlessly getting escaped before), this prevents some spurious history entries.
+Enhancements: http://code.google.com/p/google-web-toolkit/issues/list?q=status%3AFixed+milestone%3A1_5_RC+type%3Aenhancement
 
-  * Resolved [http://code.google.com/p/google-web-toolkit/issues/detail?id=1440 Issue #1440], where very large methods or programs would sometimes fail to parse on IE.
-
-  * Resolved [http://code.google.com/p/google-web-toolkit/issues/detail?id=1336 Issue #1336], where certain RPC responses would not be decoded on IE.
+Fixes: http://code.google.com/p/google-web-toolkit/issues/list?q=status%3AFixed+milestone%3A1_5_RC+type%3Adefect
