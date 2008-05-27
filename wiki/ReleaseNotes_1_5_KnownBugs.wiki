@@ -2,4 +2,4 @@
 
 = Known Bugs in GWT 1.5 =
 
-  * *!StackPanel in standards mode:* currently, the !StackPanel has an issue in standards mode that makes it difficult to set the height of a !StackPanel reliably, particularly in IE. This is an issue that is targeted for priority attention for the next release of 1.5.
+  * *!StackPanel in standards mode:* currently, the !StackPanel has an issue in IE in standards mode that makes it difficult to set the height of a !StackPanel reliably. This is an issue that is targeted for priority attention for the next release of 1.5.
