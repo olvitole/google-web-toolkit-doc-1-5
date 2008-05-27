@@ -26,3 +26,31 @@
   * * Removed dependency on java.util.Locale in !LocalizableGenerator for BCP47 compatibility. *
 
   * * User.gwt.xml now inherits the I18N module because standard widgets now support bidi. *  
+
+
+GWT.getVersion() reports what version of GWT was used to compile your application.
+GWT.isClient() can be used to detect whether shared code is running in the browser (as
+opposed to on a server).
+JavaScriptException now provides access to the underlying JS object that was thrown.
+Long emulation, and all that entails; longs are no longer value types in JSNI,
+@SuppressWarnings("restriction").
+Just for fun: add "-Dgwt.jjs.traceMethods=className.methodName" and see what the
+compiler does to your method. className can be fully-qualified or not, methodName
+can be "*" to trace all methods in a class. You can also provide a colon-separated list of
+items. You can also append the JSNI signature of the method to disambiguate
+overloads.
+
+Use Duration.currentTimeMillis() instead of System.currentTimeMillis() due to long
+emulation.
+Arrays.asList() is a really efficient array-backed collection; if you already have an array
+sitting around it allows you to avoid the linear-time copy of all the elements.
+JUnit:
+- Running JUnit tests over many test classes at once can be sped up remarkably by
+organizing test classes into GWTTestSuites (Eric added 1.5 doc for this).
+- Benchmarks have moved out of com.google.gwt.junit to com.google.gwt.benchmarks;
+existing client code will need to reorganize imports to the correct package. Range has
+been completely removed in favor of java.lang.Iterable.
+- We implemented -manual web mode to allow you to target the running test with any
+browser (there should be some 1.5 doc Eric wrote to link to)
+- setUp/tearDown replaced with gwtSetUp/gwtTearDown (Eric doc again)
+Oh yeah, we added a metadata warning escape hatch, "-Dgwt.nowarn.metadata"
