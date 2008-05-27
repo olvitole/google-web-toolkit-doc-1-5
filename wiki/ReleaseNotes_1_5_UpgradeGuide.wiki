@@ -5,3 +5,7 @@
 Indeed, GWT 1.5 is the real deal, so it's no surprise that you'll be wanting to make the move to 1.5 and reap the benefits for your GWT applications. However, before you get on your way to making the move, there are a number of [ReleaseNotes_1_5_ImportantNotes important notes] that you should read and understand before upgrading your applications.
 
 Specifically:
+  * GWT 1.5 requires Java 1.5 or later: make sure that your application is either already using Java 1.5 code or is ready to make the jump to 1.5 syntax.
+  * You'll want to update your code to use Java 1.5 style Annotations and Generics rather than relying on JavaDoc annotations (such as @gwt.typeArgs). If you don't update your code, expect to see lots of warnings during your next GWT compile or hosted mode startup. You can silence the warning messages by adding the "-Dgwt.nowarn.metadata" flag to the process, but that should only be a temporary workaround, and you *should* update your code with standard Java annotations as soon as you can.
+  * The `gwt.js` bootstrap file has been deprecated since 1.4 in favor of the `<module>.nocache.js` bootstrap file, and is no longer generated in 1.5. If your application host HTML page bootstraps using the `gwt.js` file, now is the time to make the change to the new `<module>.nocache.js` file.
+  * Make sure your application isn't sensitive to any of these [ReleaseNotes_1_5_BreakingChanges breaking changes].
