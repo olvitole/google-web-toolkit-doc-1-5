@@ -30,7 +30,7 @@ It is important to remember that the target language of your GWT application is 
 
 == Runtime library support ==
 
-GWT supports only a small subset of the classes available in the Java 2 Standard and Enterprise Edition libraries, as these libraries are quite large and rely on functionality that is unavailable within web browsers. To find out exactly which classes and methods are supported for core Java runtime packages, see the API reference for [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/java/lang.html java.lang] and [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/java/util.html java.util], which lists supported classes and contains notes on behavioral differences from the standard Java runtime.  
+GWT supports only a small subset of the classes available in the Java 2 Standard and Enterprise Edition libraries, as these libraries are quite large and rely on functionality that is unavailable within web browsers. To find out exactly which classes and methods are supported for core Java runtime packages, see the API reference for [RefJreEmulation GWT's JRE emulation].
 
 
  _Tip: You will save yourself a lot of frustration if you make sure that you use only [DevGuideJavaToJavaScriptCompiler translatable] classes in your [DevGuideClientSide client-side code] from the very beginning. To help you identify problems early, your code is checked against the JRE emulation library whenever you run in [DevGuideHostedMode hosted mode]. As a result, most uses of unsupported libraries will be caught the first time you attempt to run your application. So, _run early and often_._
@@ -39,12 +39,12 @@ GWT supports only a small subset of the classes available in the Java 2 Standard
 
 Some specific areas in which GWT emulation differs from the standard Java runtime: 
 
-  *   * Regular Expressions*:    The syntax of [http://java.sun.com/j2se/1.4.2/docs/api/java/util/regex/Pattern.html Java regular expressions] is similar, but not identical, to [http://developer.mozilla.org/en/docs/Core_JavaScript_1.5_Guide:Regular_Expressions JavaScript regular expressions]. For example, the [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/java/lang/String.html#replaceAll(java.lang.String,%20java.lang.String) replaceAll] and [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/java/lang/String.html#split(java.lang.String) split] methods use regular expressions. So, you will probably want to be careful to only use Java regular expressions that have the same meaning in !JavaScript.  
+  *   * Regular Expressions*:    The syntax of [http://java.sun.com/j2se/1.5.0/docs/api/java/util/regex/Pattern.html Java regular expressions] is similar, but not identical, to [http://developer.mozilla.org/en/docs/Core_JavaScript_1.5_Guide:Regular_Expressions JavaScript regular expressions]. For example, the [http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html#replaceAll(java.lang.String,%20java.lang.String) replaceAll] and [http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html#split(java.lang.String) split] methods use regular expressions. So, you will probably want to be careful to only use Java regular expressions that have the same meaning in !JavaScript.  
 
   *   * Serialization*:   Java serialization relies on a few mechanisms that are not available in compiled !JavaScript, such as dynamic class loading and reflection. As a result, GWT does not support standard Java serialization. Instead, GWT has an [DevGuideRemoteProcedureCalls RPC] facility that provides automatic object serialization to and from the server for the purpose of invoking remote methods.   
 
 
- _Note: For a list of JRE classes that GWT can translate out of the box, see the [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/html/jre.html documentation for the GWT JRE emulation library]._
+ _Note: For a list of JRE classes that GWT can translate out of the box, see the [RefJreEmulation documentation for the GWT JRE emulation library]._
 
 ==Classes that provide similar functionality==
 
