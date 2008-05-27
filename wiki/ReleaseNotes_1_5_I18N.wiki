@@ -6,15 +6,30 @@
 
 The standard GWT widgets have been improved to support bidirectionality, as shown in the Showcase application. This represents significant support for right-to-left languages. See Bi-di support section in [ReleaseNotes_1_5_Ui User interface improvements] for more details.
 
-=== Support for text and metadata in Java annotations ===
-
-GWT 1.5 supports and honors Java 1.5 syntax, and as a result, you can use Java annotations for text or metadata representations which can be adapted from general purpose use to i18n purposes.
-
 === Support for plural forms, including rules for 99 languages ===
 
+By specifying plural rules for your internationalized messages, and providing the plural form in respective locale properties files. For example, let's say we wanted to apply to plural form to an English message. Using the new support for plural forms, we could define the following:
+
+{{{
+public interface MyMessages extends Messages {
+  @DefaultMessage("You have {0} widgets.")
+  @PluralText({"one", "You have 1 widget."})
+  String widgetCount(@PluralCount int count);
+}
+}}}
+
+Then, in your GWT application code, create the messages class as shown below:
+
+{{{
+MyMessages msg = GWT.create(MyMessages.class);
+Window.alert(widgetCount(n));
+}}}
+
+The system will automatically choose the correct plural form based on the count. As long as you the standard locale names for your property files, the correct pluralization rule will be picked up and applied.
 
 === Support for integration with external translation tools ===
 
+Since GWT 1.5 supports and honors Java 1.5 syntax, as a result you can use Java annotations for text or metadata representations which can be adapted from general purpose use to i18n purposes. Combining this with the newly introduced Linker subsystem that developers can extend to generate any kind of output during compilation, the infrastructure to work with external translation tools is in place and should allow for easy integration.
 
 === New !LocaleInfo class lets you access information about the client locale ===
 
