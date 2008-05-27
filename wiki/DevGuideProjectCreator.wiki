@@ -4,7 +4,7 @@
 
 A commmand line tool that generates an [http://ant.apache.org/ Ant] buildfile or [http://www.eclipse.org Eclipse] project.
 
-`projectCreator [-ant projectName] [-eclipse projectName] [-out dir] [-overwrite] [-ignore]`
+`projectCreator [-ant projectName] [-eclipse projectName] [-out dir] [-overwrite] [-ignore] [-addToClassPath]`
 
 ||   `-ant`  ||  Generate an Ant buildfile to compile source (`.ant.xml` will be appended) ||  
 ||   `-eclipse`  ||  Generate an eclipse project ||  
