@@ -1,4 +1,4 @@
-#summary Unable to find type 'com.foo.client.MyApp' when running GWTShell
+#summary Unable to find type 'com.foo.client.!MyApp' when running GWTShell
 
 = Unable to find type 'com.foo.client.MyApp' when running GWTShell =
 
