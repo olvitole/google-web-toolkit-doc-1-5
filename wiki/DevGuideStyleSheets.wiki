@@ -94,6 +94,35 @@ Why does this matter?  Because if you create and share a module, it does not inc
   _Tip: Use a unique name for the `.css` file with included resources to avoid collisions.  If you automatically include "styles.css" and share your module and someone puts it on a page that already has `styles.css` there will be problems.
   _
 
+==GWT Visual Themes==
+
+GWT comes with three default visual themes that you can choose from: standard, chrome, and dark. The standard theme uses subtle shades of blue to create an lively user interface. The chrome theme uses gray scale backgrounds for a refined, professional look. The dark theme uses dark shades of gray and black with bright indigo highlights for a bold, eye catching experience.  When you inherit a visual theme, almost all widgets will have some default styles associated with them.  The visual themes allow you to focus more time on application development and less time on styling your application.
+
+By default, new GWT applications use the standard theme, but you can select any one of the themes mentioned above. Open your `gwt.xml` file and uncomment the line that inherits the theme of your choice.
+{{{
+<!-- Inherit the default GWT style sheet.  You can change       -->
+<!-- the theme of your GWT application by uncommenting          -->
+<!-- any one of the following lines.                            -->
+<!-- <inherits name='com.google.gwt.user.theme.standard.Standard'/> -->
+<!-- <inherits name="com.google.gwt.user.theme.chrome.Chrome"/> -->
+<inherits name="com.google.gwt.user.theme.dark.Dark"/>
+}}}
+
+GWT visual themes also come in RTL (right-to-left) versions if you are designing a website for a language that is writting right-to-left, such as arabic. You can include the RTL version by adding RTL to the end of the module name:
+{{{
+<inherits name="com.google.gwt.user.theme.dark.DarkRTL"/>
+}}}
+
+===Bandwidth Sensitive Applications===
+
+If you are program a bandwidth sensitive application, such as a phone application, you may not want to require that users download the entire style sheet associated with your favorite theme (about 27k).  Alternatively, you can create your own stripped down version of the style sheet that only defines the styles applicable to your application.  To do this, first include the public resources associated with one of the themes by adding the following line to your `gwt.xml` file:
+{{{
+<inherits name='com.google.gwt.user.theme.standard.StandardResources'/>
+}}}
+
+Each theme has a "Resources" version that only includes the public resources associated with the theme, but does not inject a stylesheet into the page.  You will need to create a new style sheet and inject it into the page as described in the sections above.
+
+Finally, copy the contents of the file `public/gwt/standard/standard.css` style sheet located in the package `com.google.gwt.user.theme.standard` into your new style sheet.  Strip out any styles you do not want to include, reducing the size of the file.  When you run your application, GWT will inject your stripped down version of the style sheet, but you can still reference the files associate with the standard visual theme.
 
 ==Documentation==
 
