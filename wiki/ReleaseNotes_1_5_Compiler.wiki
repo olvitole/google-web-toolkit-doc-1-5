@@ -1,4 +1,4 @@
-#summary Compiler enhancements
+#summary Compiler, Hosted Mode and Linker enhancements
 
 = Compiler, Hosted Mode & Linkers =
 
