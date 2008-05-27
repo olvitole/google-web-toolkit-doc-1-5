@@ -10,7 +10,9 @@ A command-line tool that generates a starter application and scripts for launchi
 ||   `-eclipse`  ||  Creates a debug launch configuration for the named eclipse project ||  
 ||   `-out`  ||  The directory to write output files into (defaults to current) ||  
 ||   `-overwrite`  ||  Overwrite any existing files ||  
-||   `-ignore`  ||  Ignore any existing files; do not overwrite ||  
+||   `-ignore`  ||  Ignore any existing files; do not overwrite || 
+||   `-addToClassPath` ||  Adds extra elements to the class path of files in the skeleton. ||
+||   `-addModule` || Adds extra GWT module to be inherited. || 
 ||   `className`  ||  The fully-qualified name of the application class to create ||  
 
 
