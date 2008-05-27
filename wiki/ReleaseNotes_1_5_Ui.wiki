@@ -24,7 +24,7 @@ GWT now supports HTML "standards mode" in addition to each browser's traditional
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 }}}
 
-Please note: There is a known issue with the StackPanel when using standards mode in IE in that makes it difficult to set the height of a StackPanel reliably. This is an issue that is targeted for priority attention for the next release of GWT.
+Please note: There is a known issue with the !StackPanel when using standards mode in IE in that makes it difficult to set the height of a !StackPanel reliably. This is an issue that is targeted for priority attention for the next release of GWT.
 
 === Bi-di support ===
 As demonstrated in the new Showcase sample, GWT now has significant support for right-to-left languages. If the active locale is a right-to-left language, the dir="rtl" attribute is added to the <html> element on the first call to `RootPanel.get(id)` or `RootPanel.get()`.
