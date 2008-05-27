@@ -29,8 +29,7 @@
 
 === Improvements to JUnit Testing and Benchmark components ===
   * Added GWTTestSuite classes to optimize the order in which GWTTestCases are executed.
-  * Running JUnit tests over many test classes at once can be sped up remarkably by
-[DevGuideJUnitSuites organizing test classes into GWTTestSuites].
+  * Running JUnit tests over many test classes at once can be sped up remarkably by [DevGuideJUnitSuites organizing test classes into GWTTestSuites].
   * Benchmarks have moved out of com.google.gwt.junit to com.google.gwt.benchmarks;
 existing client code will need to reorganize imports to the correct package. The Range class has been completely removed in favor of java.lang.Iterable.
   * The setUp/tearDown methods have now been replaced by [DevGuideJUnitSetUp gwtSetUp/gwtTearDown].
