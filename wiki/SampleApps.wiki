@@ -5,7 +5,7 @@
 
 http://google-web-toolkit-doc-1-5.googlecode.com/svn/wiki/SampleMail.png
 
-*[SampleShowcase Showcase]* - An application that includes many of the UI widgets that GWT supports.
+*[SampleShowcase Showcase]* - Examples of almost all Widgets that GWT supports, including source code and CSS styles for each example.
 
 http://google-web-toolkit-doc-1-5.googlecode.com/svn/wiki/SampleShowcase.png
 
