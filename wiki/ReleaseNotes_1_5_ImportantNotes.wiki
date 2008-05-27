@@ -18,6 +18,9 @@ For image bundles, replace `@gwt.resource` in your javadoc with the [http://goog
 
 Although we strongly suggest that you update your project code to use the standard Java 1.5 style annotations, you can use the new `-Dgwt.nowarn.metadata` flag to turn off warnings about using deprecated metadata annotations if you're hard pressed to update your code. If your application uses a lot of metadata, this flag might help improve compilation and hosted mode startup times since generating loads of warning messages can be costly. The right solution, however, is to update your code.
 
+=== Java `long` types cannot be passed to JSNI methods ===
+In GWT 1.5, the Java `long` type now works correctly, giving you the full proper range of a 64-bit integer. However, due to JavaScript's lack of true 64-bit integral types, long is represented as a pair of 32-bit integers and will not work properly with !JavaScript's standard math operators. The GWT 1.5 compiler will issue errors if you attempt to pass `long` values into JSNI. In cases where you do not need the full range of `long`, changing the type to `double` is the recommended work around.
+
 === Expect to use the -Xmx JVM flag ===
 The GWT compiler and hosted mode use more memory internally now. Some projects will need to increase JVM max memory to successfully compile, others may see improved compile times by increasing the limit. For example, `-Xmx512M` would set the heap max to 512 megabytes.
 
