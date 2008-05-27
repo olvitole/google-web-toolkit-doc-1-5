@@ -16,7 +16,7 @@ GWT now contains three optional visual themes that give widgets a pleasant defau
 Please note that, while these themes may serve as a useful starting point, they do not limit you in any way. You don't need to use them at all if you don't want to, and most applications will need to make significant additions or changes to the CSS introduced by these themes. The new Showcase sample lets you interactively explore the CSS styles associated with various widgets so that you can develop an intuition about how to use CSS to create exactly the style you want.
 
 === Widget animations ===
-Several widgets have optional animations to enhance user feedback: `Tree`, `TabPanel`, `DisclosurePanel`, `PopupPanel`, and `MenuBar`. You can enable an animation on any Widget that supports animations by called `someWidget.setAnimationEnabled(true)`.
+Several widgets have optional animations to enhance user feedback: `Tree`, `TabPanel`, `DisclosurePanel`, `PopupPanel`, and `MenuBar`. You can enable an animation on any Widget that supports animations by calling `someWidget.setAnimationEnabled(true)`.
 
 === Standards mode support ===
 GWT now supports HTML "standards mode" in addition to each browser's traditional "quirks mode". As of 1.5, `applicationCreator` generates HTML that uses standards mode. Note that in future GWT releases, support for quirks mode will be de-prioritized; new features and bugs will focus on perfecting standards mode behavior. When practical, you should switch your HTML to standards mode by including a tag like this at the top of your html file:
