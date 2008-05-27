@@ -33,8 +33,8 @@ Specifics:
   * Added utility class `com.google.gwt.i18n.client.BidiUtils`, which is used to set/get the directionality of an element.
   * The default alignment of the `HorizontalPanel` is now "left" in LTR layout, and "right" in RTL layout.
   * `DockPanel` defines two new direction constants - LINE_START and LINE_END. In an RTL environment, LINE_START corresponds to the right side of the `DockPanel`. In an LTR environment, LINE_START corresponds to the left side of the `DockPanel`.
-  * Tree is now bidi-compatible. Branches expand to the left when the layout is RTL. Also changed keyboard navigation: in an RTL layout, the left key expands branches, and the right key collapses them.
-  * Menu is now bidi-compatible. Submenus pop out to the left in an RTL layout. Also changed keyboard navigation so that the left key expands submenus in an RTL layout.
+  * Tree is now bidi-compatible. Branches expand to the left when the layout is RTL. Keyboard navigation is now bidi-compatible: in an RTL layout, the left key expands branches, and the right key collapses them.
+  * Menu is now bidi-compatible. Submenus pop out to the left in an RTL layout. Keyboard navigations has been changed so that the left key expands submenus in an RTL layout.
   * `HorizontalSplitPanel` is now bidi-compatible. Two methods have been added to support the adding of widgets to the panel that is at the "start of the line layout" and "end of the line layout". In RTL layout, the positioning of widgets with `HorizontalSplitPanel.add()` is right pane first, and then left pane. `setSplitPosition()` still sets the size of the left pane in RTL mode.
   * Added `TreeImagesRTL` and `DisclosureImagesRTL`, which contain be used to supply the widget images in RTL layout.
   * Modified `MenuBar` so that it accepts an `ImageBundle` as input to its constructor for its images. The default `ImageBundle` is `MenuImages` in LTR layout, and `MenuImagesRTL` in RTL layout.
