@@ -2,8 +2,6 @@
 
 = Bug Fixes in GWT 1.5 =
 
-  * DOM.setInnerText now has consistent behavior across browsers -- the IE version does not translate whitespace.
-
   * Fixed bug in Arrays.deepHashCode.
 
   * History tokens more consistently escaped (characters were needlessly getting escaped before), this prevents some spurious history entries.
