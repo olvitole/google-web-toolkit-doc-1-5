@@ -8,7 +8,7 @@ The following is a full list of command-line arguments you can pass to the Devel
 
 {{{
 $PP_OFF
-GWTShell [-port port-number | "auto"] [-noserver] [-whitelist whitelist-string] [-blacklist blacklist-string] [-logLevel level] [-gen dir] [-out dir] [-style style] [url]
+GWTShell [-port port-number | "auto"] [-noserver] [-whitelist whitelist-string] [-blacklist blacklist-string] [-logLevel level] [-gen dir] [-out dir] [-style style] [-ea]  [url]
 }}}
 
 || -out <directory> || The directory to write output files into (defaults to current) ||
