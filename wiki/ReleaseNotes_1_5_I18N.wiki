@@ -25,7 +25,7 @@ MyMessages msg = GWT.create(MyMessages.class);
 Window.alert(widgetCount(n));
 }}}
 
-The system will automatically choose the correct plural form based on the count. As long as you the standard locale names for your property files, the correct pluralization rule will be picked up and applied.
+The system will automatically choose the correct plural form based on the count. As long as you use the standard locale names for your property files, the correct pluralization rule will be picked up and applied.
 
 === Support for integration with external translation tools ===
 
