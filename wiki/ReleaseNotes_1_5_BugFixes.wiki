@@ -3,7 +3,11 @@
 = Bug Fixes in GWT 1.5 =
 
   * DOM.setInnerText now has consistent behavior across browsers -- the IE version does not translate whitespace.
+
   * Fixed bug in Arrays.deepHashCode.
+
   * History tokens more consistently escaped (characters were needlessly getting escaped before), this prevents some spurious history entries.
+
   * Resolved [http://code.google.com/p/google-web-toolkit/issues/detail?id=1440 Issue #1440], where very large methods or programs would sometimes fail to parse on IE.
+
   * Resolved [http://code.google.com/p/google-web-toolkit/issues/detail?id=1336 Issue #1336], where certain RPC responses would not be decoded on IE.
