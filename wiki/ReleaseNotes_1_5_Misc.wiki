@@ -23,6 +23,6 @@
 
   * * Upgraded !DateTimeConstants data to CLDR 1.51, and added the firstDayOfTheWeek and weekendRange formatting symbols. *
 
-  * * Removed dependency on java.util.Locale in LocalizableGenerator for BCP47 compatibility. *
+  * * Removed dependency on java.util.Locale in !LocalizableGenerator for BCP47 compatibility. *
 
   * * User.gwt.xml now inherits the I18N module because standard widgets now support bidi. *  
