@@ -2,7 +2,7 @@
 
 http://google-web-toolkit-doc-1-5.googlecode.com/svn/wiki/SampleShowcase.png
 
-Examples of almost all GWT Widgets, including source code and CSS styles for each example.
+Examples of almost all Widgets that GWT supports, including source code and CSS styles for each example.
 
 [http://gwt.google.com/samples/Showcase/Showcase.html See Demo]
 
