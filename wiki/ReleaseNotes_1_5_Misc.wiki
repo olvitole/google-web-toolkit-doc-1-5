@@ -6,7 +6,7 @@
   If your application's name is !MyApp, then the default css file will be named !MyApp.css.
 
   * *Binary only annotations can be used in translatable source *
-  Of course, this is in addition source only annotations.
+  Of course, this is in addition to source-only annotations.
 
   * * Generators *
     * Expose Java 1.5 constructs like annotations and generics to Generator authors
