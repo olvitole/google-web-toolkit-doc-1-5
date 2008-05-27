@@ -24,12 +24,9 @@ If your application checks out on all of the above points and you're still ready
 
   # *Update your GWT project build path* to use the latest GWT JARs. This includes `gwt-user.jar`, `gwt-dev-<platform>.jar` and `gwt-servlet.jar` if your application uses GWT-RPC.
 
-  # *Update any run configurations or application compile and shell
-scripts* to include the latest JARs in the classpath (same JARs as
-mentioned in step 2).
+  # *Update any run configurations or application compile and shell scripts* to include the latest JARs in the classpath (same JARs as mentioned in step 2).
 
-  # *Run a GWT compilation* over your project to generate the latest GWT
-application files for your project.
+  # *Run a GWT compilation* over your project to generate the latest GWT application files for your project.
 
   # *Deploy the latest GWT application files* to your web server.
 
