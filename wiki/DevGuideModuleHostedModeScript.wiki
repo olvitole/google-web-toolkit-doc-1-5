@@ -19,6 +19,8 @@ GWTShell [-port port-number | "auto"] [-noserver] [-whitelist whitelist-string] 
 || -logLevel <level> || The level of logging detail: ERROR, WARN, INFO, TRACE, DEBUG, SPAM, or ALL ||
 || -gen <directory> || The directory into which generated files will be written for review ||
 || -style || Script output style: OBF`[`USCATED`]`, PRETTY, or DETAILED (defaults to OBF) || 
+|| -ea ||  Debugging: causes the compiled output to check assert statements. ||
+|| url || Automatically launches the specified URL ||
 
 Any arguments at the end of the command-line are assumed to be URLs used to launch the hosted browser.
 
