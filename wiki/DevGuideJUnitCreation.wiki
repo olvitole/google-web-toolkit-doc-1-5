@@ -198,6 +198,8 @@ When developing a large project, a good practice is to integrate the running of 
 
 As mentioned before, when you run `GWTTestCase` tests, there is an invisible browser running. However, even though the browser is invisible, the test case classes still require the GUI libraries to run.  If you need to run unit test cases on a headless server (usually as a part of an automated build), make sure the same GUI libraries that would be used to run GWT hosted mode are installed on the server.  On Linux, you can run the X Virtual Framebuffer (Xvfb) to be a target for the invisible browser before launching your tests.
 
+Also, consider organizing your tests into [DevGuideJUnitSuites GWTTestSuite] classes to get the best performance from your unit tests.
+
 ==Server side testing==
 
 The tests described above are intended to assist with testing client side code.  The test case wrapper `GWTTestCase` will launch either a hosted mode session or a web browser to test the generated JavaScript.  On the other hand, server side code runs as native Java in a JVM without being translated to JavaScript, so it is not appropriate to run tests of server side code using 'GWTTestCase' as the base class for your tests. Instead, use JUnit's `TestCase` and other related classes directly when writing tests for your application's server side code.
