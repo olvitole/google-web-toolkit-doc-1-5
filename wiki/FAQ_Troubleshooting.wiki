@@ -6,3 +6,5 @@ Some commonly encountered technical issues
 * [FAQ_FailedToGetGlobalExecState Error launching hosted mode: Failed to getGlobalExecState]
 
 * [FAQ_AssertionElementMayOnlyBeSetOnce AssertionError: Element may only be set once]
+
+* [FAQ_JUnitTestsFailOnMac JUnit Tests fail on Mac]
