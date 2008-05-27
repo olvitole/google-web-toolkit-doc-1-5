@@ -1,0 +1,16 @@
+=Showcase Sample Application=
+
+http://google-web-toolkit-doc-1-5.googlecode.com/svn/wiki/SampleShowcase.png
+
+Examples of almost all GWT Widgets, including source code and CSS styles for each example.
+
+[http://gwt.google.com/samples/Showcase/Showcase.html See Demo]
+
+GWT features used:
+
+ * [DevGuideUserInterface UI widgets]
+ * [DevGuideStyleSheets Style sheets]
+ * [GettingStartedI18n Internationalization]
+ * [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/History.html History management]
+
+|| *[http://code.google.com/webtoolkit/download.html Download Source Code]* ||
