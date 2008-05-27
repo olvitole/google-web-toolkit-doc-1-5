@@ -2,10 +2,11 @@
 
 = Miscellaneous Features & Improvements =
 
-* Application creator now creates a default css file *: If your application's name is MyApp,
-then the default css file will be named MyApp.css.
+* Application creator now creates a default css file *
+If your application's name is MyApp, then the default css file will be named MyApp.css.
 
-*Binary only annotations can be used in translatable source *: of course, this is in addition source only annotations.
+*Binary only annotations can be used in translatable source * 
+Of course, this is in addition source only annotations.
 
 * Generators *:
   * Expose Java 1.5 constructs like annotations and generics to Generator authors
@@ -13,9 +14,11 @@ then the default css file will be named MyApp.css.
   * Generators can now send custom Artifact instances to the Linker stack via
 GeneratorContext.commitArtifact(). This change also ties into the new Linker subsystem.
 
-* New <rename-to> module XML tag *: The module XML file now supports an optional attribute "rename-to" which will change the name of the module produced by the compiler. This allows you to do such things as create drop-in replacements for your module by creating various working modules that can be renamed to your standard module name.
+* New <rename-to> module XML tag *
+The module XML file now supports an optional attribute "rename-to" which will change the name of the module produced by the compiler. This allows you to do such things as create drop-in replacements for your module by creating various working modules that can be renamed to your standard module name.
 
-* Call Java constructors from JSNI code *: Java constructors can now be called directly from JSNI via the ::new method reference.
+* Call Java constructors from JSNI code *
+Java constructors can now be called directly from JSNI via the ::new method reference.
 
 * Added GWTTestSuite classes to optimize the order in which GWTTestCases are executed. *
 
@@ -23,5 +26,6 @@ GeneratorContext.commitArtifact(). This change also ties into the new Linker sub
 and weekendRange formatting symbols. *
 
 * Removed dependency on java.util.Locale in LocalizableGenerator for BCP47
-compatibility.
+compatibility. *
+
 * User.gwt.xml now inherits the I18N module because standard widgets now support bidi. *
