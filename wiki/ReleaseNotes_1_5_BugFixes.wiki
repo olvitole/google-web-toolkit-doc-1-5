@@ -9,8 +9,3 @@
   * Resolved [http://code.google.com/p/google-web-toolkit/issues/detail?id=1440 Issue #1440], where very large methods or programs would sometimes fail to parse on IE.
 
   * Resolved [http://code.google.com/p/google-web-toolkit/issues/detail?id=1336 Issue #1336], where certain RPC responses would not be decoded on IE.
-
-=== Known bugs ===
-
-  * !StackPanel in standards mode 
-  Currently, the !StackPanel has an issue in IE in standards mode that makes it difficult to set the height of a !StackPanel reliably, particularly in IE. This is an issue that is targeted for priority attention for the next release of 1.5.
