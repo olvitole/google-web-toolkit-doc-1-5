@@ -8,6 +8,73 @@ http://google-web-toolkit-doc-1-5.googlecode.com/svn/wiki/StockWatcherDebug3.png
 
 Ok.  Let's face the facts: !StockWatcher is downright _ugly_.  But it doesn't have to stay that way.  Let's add some style and give our GWT application a much needed make-over.
 
+==Using default visual themes==
+
+You'll notice that at least the buttons in !StockWatcher have a fancy gradient as a background, but where did this come from?  GWT has three default visual themes that you can choose from: standard, chrome, and dark.  The standard theme uses subtle shades of blue to create an lively user interface.  The chrome theme uses gray scale backgrounds for a refined, professional look.  The dark theme uses dark shades of gray and black with bright indigo highlights for a bold, eye catching experience.
+
+By default, new GWT applications use the standard theme, but you can select any one of the themes mentioned above.  Open the `StockWatcher.gwt.xml` file and uncomment the line that inherits the dark theme.  You'll also need to comment out the standard theme, as you should only use one visual theme at a time.
+
+{{{
+<module>
+
+      <!-- Inherit the core Web Toolkit stuff.                        -->
+      <inherits name='com.google.gwt.user.User'/>
+	
+      <!-- Inherit the default GWT style sheet.  You can change       -->
+      <!-- the theme of your GWT application by uncommenting          -->
+      <!-- any one of the following lines.                            -->
+      <!-- <inherits name='com.google.gwt.user.theme.standard.Standard'/> -->
+      <!-- <inherits name="com.google.gwt.user.theme.chrome.Chrome"/> -->
+      <inherits name="com.google.gwt.user.theme.dark.Dark"/>
+
+      <!-- Other module inherits                                      -->
+
+
+      <!-- Specify the app entry point class.                         -->
+      <entry-point class='com.google.gwt.sample.stockwatcher.client.StockWatcher'/>
+    
+      <!-- Specify the application specific style sheet.              -->
+      <stylesheet src='StockWatcher.css' />
+	
+</module>
+}}}
+
+Restart your application in hosted mode (when you edit the `StockWatcher.gwt.xml` file, you need to restart hosted mode; refreshing in hosted mode will not pick up your changes), and your app should look very different.
+
+http://google-web-toolkit-doc-1-5.googlecode.com/svn/wiki/StockWatcherDarkTheme.png
+
+GWT visual themes also come in RTL (right-to-left) versions if you are designing a website for a language that is writting right-to-left, such as arabic.  You can include the RTL version by adding `RTL` to the end of the module name:
+{{{
+  <inherits name="com.google.gwt.user.theme.dark.DarkRTL"/>
+}}}
+
+The rest of this tutorial uses the standard GWT visual theme.  If you've already edited the `StockWatcher.gwt.xml` file to try the dark theme, you should replace its contents with the following to use the standard theme.
+
+{{{
+<module>
+
+      <!-- Inherit the core Web Toolkit stuff.                        -->
+      <inherits name='com.google.gwt.user.User'/>
+	
+      <!-- Inherit the default GWT style sheet.  You can change       -->
+      <!-- the theme of your GWT application by uncommenting          -->
+      <!-- any one of the following lines.                            -->
+      <inherits name='com.google.gwt.user.theme.standard.Standard'/>
+      <!-- <inherits name="com.google.gwt.user.theme.chrome.Chrome"/> -->
+      <!-- <inherits name="com.google.gwt.user.theme.dark.Dark"/>     -->
+
+      <!-- Other module inherits                                      -->
+
+
+      <!-- Specify the app entry point class.                         -->
+      <entry-point class='com.google.gwt.sample.stockwatcher.client.StockWatcher'/>
+    
+      <!-- Specify the application specific style sheet.              -->
+      <stylesheet src='StockWatcher.css' />
+	
+</module>
+}}}
+
 ==Adding static HTML==
 
 The first method of styling your GWT application is to add HTML to your [DevGuideHostPage host page].  Recall from our discussion of [GettingStartedUserInterface user interface design] that one common way to use GWT is to attach one or more [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.5/com/google/gwt/user/client/ui/RootPanel.html RootPanel]'s to placeholder elements in the host page's body (!StockWatcher does this).  In addition to those placeholders, your host page can also contain any other HTML you want to include.
@@ -21,14 +88,19 @@ To include static resources (like images) in our host page, we need to add them 
 Now, modify the !StockWatcher host page (`src/com/google/gwt/sample/stockwatcher/public/StockWatcher.html`) by adding an `<img>` tag pointing to the logo file:
 
 {{{
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" 
+"http://www.w3.org/TR/html4/loose.dtd">
+
 <html>
   <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <title>StockWatcher</title>
-    <script language='javascript' src='com.google.gwt.sample.stockwatcher.StockWatcher.nocache.js'></script>
+    <script type="text/javascript" language="javascript" src="com.google.gwt.sample.stockwatcher.StockWatcher.nocache.js"></script>
   </head>
+
   <body>
     <img src="images/GoogleCode.png" />
-    <h1>StockWatcher</h1>
+    <h1>Stock Watcher</h1>
     <div id="stockList"></div>
   </body>
 </html>
@@ -217,10 +289,16 @@ body, .watchList {
 }
 }}}
 
-Like images, CSS files are static resources that are referenced from within our host page.  So go ahead and save the CSS rules above into a file named `StockWatcher.css` and store it in the `src/com/google/gwt/sample/stockwatcher/public` directory.  Then open up the host page `StockWatcher.html` and add the following inside its `<head>` tag: 
+Like images, CSS files are static resources that are referenced from within our host page.  Your application already contains a style sheet called `StockWatcher.css`, so go ahead and save the CSS rules above into that file.
 
+You can add additional style sheets in one of two ways.  First, you can add a link tag inside the `<head>` section of the host page `StockWatcher.html` by adding the following line (you also need to create a file called `MyStyleDefinitions.css` in the `public` directory):
 {{{
-<link type="text/css" rel="stylesheet" href="StockWatcher.css" />
+<link type="text/css" rel="stylesheet" href="MyStyleDefinitions.css" />
+}}}
+
+Alternatively, you can add a style sheet in the `StockWatcher.gwt.xml` file by including a `stylesheet` tag.  If you open `StockWatcher.gwt.xml` now, you will see that `StockWatcher.css` is included in just this way.  To add your style sheet in the `gwt.xml` file, add the following line:
+{{{
+<stylesheet src='MyStyleDefinitions.css'/>
 }}}
 
 This is the standard way to load an external CSS file into an HTML document.  If this were a traditional web page, we would now go through the HTML source and add `class` attributes to various elements to give them the proper style.  However, that's not going to work with GWT widgets since they're created dynamically at runtime.  Instead, we'll use the methods we talked about earlier to add and change our widgets' styles.
