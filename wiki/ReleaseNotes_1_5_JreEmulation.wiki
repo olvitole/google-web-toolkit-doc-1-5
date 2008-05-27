@@ -21,8 +21,7 @@
   * Integer.bitCount()
   * Several additional methods on Class, String and Character
 
-=== Improvements or changes to existing JRE classes ===
-Use `Duration.currentTimeMillis()` instead of `System.currentTimeMillis()`, since long is now emulated.
+=== Improvements or changes to existing JRE classes ===Use `Duration.currentTimeMillis()` instead of `System.currentTimeMillis()`, since long is now emulated.
 `Arrays.asList()` is a really efficient array-backed collection; if you already have an array sitting around, it allows you to avoid the linear-time copy of all the elements.
 
 === GWT.getTypeName() is now deprecated ===
