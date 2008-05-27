@@ -9,6 +9,9 @@
 === Call Java constructors from JSNI code ===
   Java constructors can now be called directly from JSNI via the ::new method reference.
 
+=== Access underlying JS object when catching a JavaScriptException ===
+  The JavaScriptException class has been improved to provide access to the underlying JS object when catching the exception.
+
 === Improvements or changes in usage to JRE classes ===
       * Use `Duration.currentTimeMillis()` instead of `System.currentTimeMillis()`, since long is now emulated.
       * `Arrays.asList()` is a really efficient array-backed collection; if you already have an array sitting around, it allows you to avoid the linear-time copy of all the elements.
