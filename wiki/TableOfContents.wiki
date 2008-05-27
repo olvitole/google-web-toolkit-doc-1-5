@@ -11,6 +11,7 @@
       * [ReleaseNotes_1_5_JreEmulation JRE emulation]
       * [ReleaseNotes_1_5_Ui User interface]
       * [ReleaseNotes_1_5_Rpc Remote procedure calls]
+      * [ReleaseNotes_1_5_I18N Internationalization]
     * [ReleaseNotes_1_5_BreakingChanges Breaking changes]
     * [ReleaseNotes_1_5_BugFixes Bug fixes]
   * [GettingStarted Tutorial]
