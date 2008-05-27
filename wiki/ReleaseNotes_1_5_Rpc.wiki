@@ -3,7 +3,7 @@
 = Enhancements to the GWT RPC components =
 
 === Java 1.5 syntax supported ===
-GWT 1.5 supports and honors the Java 1.5 constructs like generics and annotations. This means, for example, that rather than using the @gwt.typeArgs !JavaDoc annotation for types transferred through RPC, you can (and should) use real @gwt.typeArgs annotations instead.
+GWT 1.5 supports and honors the Java 1.5 constructs like generics and annotations. This means, for example, that rather than using the @gwt.typeArgs !JavaDoc annotation for types transferred through RPC, you can (and should) use real type parameters instead.
 
 === Asynchronous interface improvements - access underlying HTTP request objects and RPC payloads === 
 There have been a couple of major improvements to the asynchronous interface component in GWT RPC.
