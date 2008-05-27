@@ -7,7 +7,7 @@ A command-line tool that generates a [DevGuideJUnitIntegration JUnit test] and s
 
 {{{
 $PP_OFF
-junitCreator -junit pathToJUnitJar [-eclipse projectName] [-out dir] [-overwrite] [-ignore] className
+junitCreator -junit pathToJUnitJar [-eclipse projectName] [-out dir] [-overwrite] [-ignore] [-addToClassPath] className
 }}}
 
 
