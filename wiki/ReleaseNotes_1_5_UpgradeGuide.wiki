@@ -1,4 +1,4 @@
-#summary GWT 1.5 Upgrade Guide
+#summary How to upgrade to GWT 1.5
 
 = How to upgrade to GWT 1.5 =
 
