@@ -7,6 +7,7 @@
   * What's new in 1.5?
     * [ReleaseNotes_1_5_ImportantNotes Important notes]
     * New features
+      _New features introduced in GWT 1.5_
       * [ReleaseNotes_1_5_Compiler Compiler]
       * [ReleaseNotes_1_5_JreEmulation JRE emulation]
       * [ReleaseNotes_1_5_Ui User interface]
