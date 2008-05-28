@@ -15,6 +15,8 @@ Specifically:
 
   * If you're making the upgrade from 1.3 to 1.5, be sure to check out the [http://code.google.com/webtoolkit/releases/release-notes-1.4.62.html breaking changes] introduced from 1.3 to 1.4 as these still apply in 1.5 (ignoring notes about @gwt.typeArgs !JavaDoc annotations as these must be replaced by real Java 1.5 annotations).
 
+---
+
 _If your application checks out on all of the above points and you're still ready to ride 1.5, follow the instructions below to upgrade_:
 
   1. *Download GWT 1.5 RC* for your platform at the link below and unpack it to the directory of your choice:
