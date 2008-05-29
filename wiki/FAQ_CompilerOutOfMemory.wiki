@@ -1,4 +1,4 @@
-#summary The GWT compiler reports java.lang.OutOfMemoryError: Java heap space
+#summary The GWT compiler reports java.lang.!OutOfMemoryError: Java heap space
 
 = GWT Compiler reports java.lang.OutOfMemoryError: Java heap space =
 
