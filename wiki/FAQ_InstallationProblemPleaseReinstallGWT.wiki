@@ -2,8 +2,22 @@
 
 = !RuntimeException: Installation problem detected, please reinstall GWT =
 
-This message occurs when you launch the GWT compiler or hosted mode, and the path to the runtime binary installation of GWT cannot be located.
+When launching the GWT compiler or hosted mode, you may see the following exception:
 
-Usually, this path is embedded in the scripts that are created from [DevGuideApplicationCreator applicationCreator] and [DevGuideProjectCreator projectCreator].  The path should contain not only `gwt-user.jar` and `gwt-dev-<platform>.jar`, but also the platform specific shared library files, such as `libgwt_ll.so` or `libgwt_ll.jnilib`.  Make sure that the path specified on the classpath still contains the shared libraries.  If not, you may need to re-install.
+{{{
+$PP_OFF
+.Exception in thread "main" java.lang.ExceptionInInitializerError
+Caused by: java.lang.RuntimeException: Installation problem detected, please reinstall GWT
+    at com.google.gwt.util.tools.Utility.computeInstallationPath(Utility.java:322)
+    at com.google.gwt.util.tools.Utility.getInstallPath(Utility.java:223)
+    at com.google.gwt.util.tools.ToolBase.<clinit>(ToolBase.java:55)
+Caused by: java.io.IOException: Cannot determine installation directory; apparently not running from a jar
+    at com.google.gwt.util.tools.Utility.computeInstallationPath(Utility.java:307)
+  ...
+}}}
+
+This message occurs when the runtime binary installation of GWT cannot be located.
+
+The GWT installation path is embedded in the scripts that are created from [DevGuideApplicationCreator applicationCreator] and [DevGuideProjectCreator projectCreator].  The path should contain not only `gwt-user.jar` and `gwt-dev-<platform>.jar`, but also the platform specific shared library files, such as `libgwt_ll.so` or `libgwt_ll.jnilib`.  Make sure that the path specified on the classpath still contains the shared libraries.  If not, you may need to re-download and unpack the GWT distribution, making sure your download is complete.
 
 For developers running GWT from source, make sure you also have a binary distribution or pre-compiled source unpacked and have set the system property `gwt.devjar` configured in your launch configurations as specified in the file `eclipse/README.txt`.
