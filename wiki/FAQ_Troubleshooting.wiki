@@ -7,6 +7,8 @@ Some commonly encountered technical issues
 
 * [FAQ_UnableToFindModuleInHosted Unable to find type 'com.foo.client.MyApp' when running GWTShell]
 
+* [FAQ_CompilerOutOfMemory OutOfMemoryException from Compiler after upgrading to GWT 1.5]
+
 * [FAQ_FailedToGetGlobalExecState Error launching hosted mode: Failed to getGlobalExecState]
 
 * [FAQ_AssertionElementMayOnlyBeSetOnce AssertionError: Element may only be set once]
