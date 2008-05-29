@@ -1,6 +1,6 @@
-#summary The GWT compiler reports java.lang.!OutOfMemoryError: Java heap space
+#summary The GWT compiler reports java.lang.OutOfMemoryError: Java heap space
 
-= GWT Compiler reports java.lang.OutOfMemoryError: Java heap space =
+= GWT Compiler reports java.lang.!OutOfMemoryError: Java heap space =
 
 When compiling a project in GWT 1.5 or later, you may start to encounter problems with running out of memory:
 
