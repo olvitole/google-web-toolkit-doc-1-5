@@ -1,0 +1,11 @@
+#summary RuntimeException: Installation problem detected, please reinstall GWT
+
+= RuntimeException: Installation problem detected, please reinstall GWT =
+
+This message occurs when you launch the GWT compiler or hosted mode, and the path to the runtime binary installation of GWT cannot be located.
+
+Usually, this path is embedded in the scripts that are created from [DevGuideApplicationCreator applicationCreator] and [DevGuideProjectCreator projectCreator].  The path should contain not only `gwt-user.jar` and `gwt-dev-<platform>.jar`, but also the platform specific shared library files, such as `libgwt_ll.so` or `libgwt_ll.jnilib`.  Make sure that the path specified on the classpath still contains the shared libraries.  If not, you may need to re-install.
+
+For developers running GWT from source, make sure you also have a binary distribution or pre-compiled source unpacked and have set the system property `gwt.devjar` configured in your launch configurations as specified in the file `eclipse/README.txt`.
+
+
