@@ -125,7 +125,7 @@ GWT contains an [http://google-web-toolkit-doc-1-5.googlecode.com/svn/javadoc/1.
           boolean ctrl = DOM.eventGetCtrlKey(event);
           boolean shift = DOM.eventGetShiftKey(event);
           boolean alt = DOM.eventGetAltKey(event);
-          boolean metal = DOM.eventGetMetaKey(event);
+          boolean meta = DOM.eventGetMetaKey(event);
           
           if (DOM.eventGetType(event) != Event.ONKEYPRESS
               || ctrl || shift || alt || meta
