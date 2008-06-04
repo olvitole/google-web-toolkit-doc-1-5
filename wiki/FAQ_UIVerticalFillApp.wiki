@@ -1,6 +1,6 @@
 #summary How do I create an app that fills the page vertically when the browser window resizes?
 
-= How to create an app that fills the page vertically when the browser window resizes? =
+= How do I create an app that fills the page vertically when the browser window resizes? =
 
 Creating an application that fills the browser window can be a challenge for web application designers.  The underlying problem is that different browsers treat the CSS specification of "100%" for height in different ways.  The [http://gwt.google.com/samples/Mail/Mail.html Mail sample application] demonstrates a simple cross-browser technique using GWT.  
 
