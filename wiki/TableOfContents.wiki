@@ -182,7 +182,7 @@
       * [FAQ_UILargeTablePerformance How do I display a big list of items in a table with good performance?]
       * [FAQ_UILayoutDebug I'm having trouble with my layout.  How do I tell where my panels are?]
       * [FAQ_UIImagePreload What can I do to make animations appear more smooth and borders load more quickly?]
-      * [FAQ_UIOnePxBackgroundInIE  Why do I see poor performance in Internet Explorer when using background image?]
+      * [FAQ_UIOnePxBackgroundInIE  Why do I see poor performance when using a one pixel background image?]
     * [FAQ_Troubleshooting Troubleshooting]
       * [FAQ_InstallationProblemPleaseReinstallGWT RuntimeException: Installation problem detected, please reinstall GWT]
       * [FAQ_UnableToFindModuleInHosted Unable to find type 'com.foo.client.MyApp' when running GWTShell]

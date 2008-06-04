@@ -1,10 +1,10 @@
-#summary How to create an app that fills the page vertically when the browser window resizes?
+#summary How do I create an app that fills the page vertically when the browser window resizes?
 
 = How to create an app that fills the page vertically when the browser window resizes? =
 
 Creating an application that fills the browser window can be a challenge for web application designers.  The underlying problem is that different browsers treat the CSS specification of "100%" for height in different ways.  The [http://gwt.google.com/samples/Mail/Mail.html Mail sample application] demonstrates a simple cross-browser technique using GWT.  
 
-The Mail sample instead uses absolute (pixel) units to set the outermost Widget's height.   Then, it adds a window resize handler in order to reset the height of the widget whenever the broweser window changes size.  Here is a code snippet:
+Instead of setting the CSS height attribute to "100%", the Mail sample uses absolute pixel ("px") units to set the outermost Widget's height.   Then, it adds a window resize handler in order to reset the height whenever the browser window changes size.  Here is a code snippet:
 
 {{{
    final VerticalPanel vp = new VerticalPanel();
@@ -22,4 +22,4 @@ The Mail sample instead uses absolute (pixel) units to set the outermost Widget'
 
 The above code snippet has been tested to work on Internet Explorer, Safari, and Firefox.  
 
-Note that the use of the type of panel is significant.  If you decide to change the outer widget to a different type of panel or widget, make sure you test your application on all your target browsers.  
+Note that the type of panel is significant.  If you decide to change the outer widget to a different type of panel or widget, make sure you test your application on all your target browsers.
