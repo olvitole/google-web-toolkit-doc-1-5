@@ -1,0 +1,3 @@
+#summary Why do I see poor performance in Internet Explorer when using background image?
+
+= Why do I see poor performance in Internet Explorer when using background image? =

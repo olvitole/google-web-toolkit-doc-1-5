@@ -1,0 +1,3 @@
+#summary What can I do to make animations appear more smooth and borders load more quickly?
+
+= What can I do to make animations appear more smooth? =
