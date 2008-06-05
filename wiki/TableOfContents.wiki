@@ -71,6 +71,7 @@
       * [DevGuideDeferredCommand Programming Delayed Logic]
       * [DevGuideDateAndNumberFormat Date and Number Formatting]
     * [DevGuideHostedMode Debugging in Hosted Mode]
+    * [DevGuideRunningInWebMode Running In Web Mode]
     * [DevGuideWebMode Deployment in Web Mode]
     * [DevGuideServerCalls Communicating with a server]
       * [DevGuideRemoteProcedureCalls Remote Procedure Calls]

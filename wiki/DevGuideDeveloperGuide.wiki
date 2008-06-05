@@ -17,6 +17,9 @@ As shown in [DevGuideWidgetGallery the gallery], GWT includes a variety of [DevG
 [DevGuideHostedMode Debugging in Hosted Mode]
 An embedded web browser lets you run and debug applications directly in any Java development environment before being translated into !JavaScript.
 
+[DevGuideRunningInWebMode Running in Web Mode]
+The Hosted Mode shell allows you to run the GWT compiler to generate JavaScript and view your application in a web browser.
+
 [DevGuideWebMode Deployment in Web Mode]
 Compile your application into !JavaScript for easy deployment.
 
