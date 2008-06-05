@@ -13,7 +13,7 @@ Running your application in this manner allows you to test your application as i
 Running in web mode is a good way to test:
 
   * *The performance of your application*
-  Hosted Mode uses a series of special tricks to run Java code in Java, and native JavaScript code in the Hosted Mode shell's JavaScript engine.  When switching back and forth, there can be overhead that makes Hosted Mode run more sluggishly than the compiled application running in a browser.
+  Hosted Mode uses a series of special tricks to run Java code in Java, and native !JavaScript code in the Hosted Mode shell's JavaScript engine.  When switching back and forth, there can be overhead that makes Hosted Mode run more sluggishly than the compiled application running in a browser.
 
   If your application displays lots of data or has a large number of widgets, you will want to confirm that performance will be acceptable when the application is finally deployed.
 
@@ -22,7 +22,7 @@ Running in web mode is a good way to test:
   Since GWT's widgets use the browser's native DOM components, the look and feel of your application may change from browser to browser. More importantly, if you are using a stylesheet, you will want to inspect your application carefully on each browser.  
 
   * *How your application logic performs on different browsers*
-  GWT is designed to provide cross browser support so that the average GWT developer does not need to worry about cross browser support.  But if you are a widget author or if you are using a third party JavaScript library, you will need to confirm that these components are working correctly on each target browser you plan to support.
+  GWT is designed to provide cross browser support so that the average GWT developer does not need to worry about cross browser support.  But if you are a widget author or if you are using a third party !JavaScript library, you will need to confirm that these components are working correctly on each target browser you plan to support.
 
 
 ===See Also===
