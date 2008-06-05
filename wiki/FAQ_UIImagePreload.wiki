@@ -1,6 +1,6 @@
-#summary What can I do to make images and borders load more quickly the first time they are used?
+#summary What can I do to make images and borders appear to load more quickly the first time they are used?
 
-= What can I do to make images and borders load more quickly the first time they are used? =
+= What can I do to make images and borders appear to load more quickly the first time they are used? =
 
 The first time your application accesses an image, you may notice that it may only partially load, or load more slowly than it displays on subsequent invocations.  Since first impressions are important, you may want to try this trick.
 
