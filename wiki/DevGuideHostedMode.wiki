@@ -17,7 +17,7 @@ http://google-web-toolkit-doc-1-5.googlecode.com/svn/wiki/DevelopmentShell1.png
 
 The first message logged to the Development Shell is about starting an HTTP session.  By default, the development shell runs a Tomcat instance to serve your host page and host server-side Java functionality.  You can disable this internal server by passing the `-noserver` option to hosted mode and replace it with another web server or servlet container.
 
-The Development Shell is the launching point for a hosted mode browsing session.  This browser displays your application and gives you the standard controls of a web browser, plus a _Compile/Browse_ Button to deploy the client-side code to !JavaScript for viewing with a standard web browser.
+The Development Shell is the launching point for a hosted mode browsing session.  This browser displays your application and gives you the standard controls of a web browser, plus a _Compile/Browse_ Button to deploy the client-side code to !JavaScript for [DevGuideRunningInWebMode viewing with a standard web browser].
 
 http://google-web-toolkit-doc-1-5.googlecode.com/svn/wiki/HostedMode1.png
 

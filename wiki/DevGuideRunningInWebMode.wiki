@@ -4,9 +4,9 @@
 
 After you have your application working well in hosted mode, you will want to try out your app in your target web browsers.  This is as easy as hitting the _Compile/Browse_ button on the toolbar of the Hosted Mode Shell window:
 
-http://google-web-toolkit-doc-1-5.googlecode.com/svn/wiki/HostedMode1.png
+http://google-web-toolkit-doc-1-5.googlecode.com/svn/wiki/WebMode1.png
 
-When you press this button, the Hosted Mode Shell will pause while the GWT compiler translates your Java source code (plus the source code of the GWT library and any third party libraries) into optimized !JavaScript.  If the compilation runs into errors, they will be displayed in the Development Shell window.  After the compilation completes sucessfully, a new browser window will appear displaying your HTML host page and your application (or an existing browser session might display your application in a new tab.)
+When you press this button, the Hosted Mode Shell will pause while the GWT compiler translates your Java source code (plus the source code of the GWT library and any third party libraries) into optimized !JavaScript.  If the compilation runs into errors, they will be displayed in the Development Shell window.  After the compilation completes successfully, a new browser window will appear displaying your HTML host page and your application (or an existing browser session might display your application in a new tab.)
 
 Running your application in this manner allows you to test your application as it is deployed.  If you have a servlet component and have specified the `<servlet>` tag in your `<module>.gwt.xml` file, your GWT RPC calls will also be served to the browser.  You can also take a different browser or a browser running on another machine and point it at the same URL (substitute the hostname or IP address of your workstation for `localhost` in the URL.)  
 
