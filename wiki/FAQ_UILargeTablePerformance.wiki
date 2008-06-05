@@ -14,8 +14,8 @@ TBD - Emily what did you mean here?  (CSS width in pixels or em, not %?)
 
 Most applications are loading the data for their table over the network.  Try to reduce the number of round trips your application has to make to populate the table.  Two main strategies come to mind:
 
-  1 Fetch multiple rows in the same request.
-  2 Combine activity from the different subsystems of the app into a single RPC call.  From the combined datstructure so you can fetch data relevant to different parts of the application in the same RPC call and reduce user wait time.
+ 1 Fetch multiple rows in the same request.
+ 1 Combine activity from the different subsystems of the app into a single RPC call.  From the combined datstructure so you can fetch data relevant to different parts of the application in the same RPC call and reduce user wait time.
 
 
 == Testing for Performance ==
@@ -27,7 +27,7 @@ If you have a large table, make sure you run a test with the largest number of r
 
 If you find yourself with a table performance issue, the best way to address it might be not display most of your data.  A table implementation called the [http://code.google.com/p/google-web-toolkit-incubator/wiki/PagingScrollTable PagingScrollTable] can help you display data a page at a time instead of having to wait for the entire dataset to download to the browser.  This breed of table is very common in web apps and won't be foreign to users.  As a rule of thumb, consider using !PagingScrollTable if you have more than 50 rows of data to display.
 
-Note that the PagingScrollTable is a part of the [http://code.google.com/p/google-web-toolkit-incubator/ GWT Incubator] project which you will need to download separately from the core GWT distribution.
+Note that the !PagingScrollTable is a part of the [http://code.google.com/p/google-web-toolkit-incubator/ GWT Incubator] project which you will need to download separately from the core GWT distribution.
 
 If you can use the !PagingScrollTable, then consider the [http://code.google.com/p/google-web-toolkit-incubator/wiki/PagingScrollTable CachedTableModel] (also a part of the [http://code.google.com/p/google-web-toolkit-incubator/ GWT Incubator]) you can use to automatically prefetch rows, such as the next page. This can increase the perceived speed considerably. 
 
