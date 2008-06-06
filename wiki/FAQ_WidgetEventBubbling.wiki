@@ -7,7 +7,5 @@ hen using a GWT event handler, GWT hides all this away from you and delivers eve
 
 If you are building a widget, you may want to consider handling events in a different way, called Event Bubbling.   Quirksmode has a writeup of the background behind [http://www.quirksmode.org/js/events_order.html Event Bubbling] in how different browsers deliver events.  
 
-See the implementation of the [http://google-web-toolkit.googlecode.com/svn/releases/1.5http://google-web-toolkit.googlecode.com/svn/releases/1.5/user/src/com/google/gwt/user/client/ui/Tree.java Tree] class for an example of using Event Bubbling in GWT.
-
-
+See the [http://google-web-toolkit.googlecode.com/svn/releases/1.5/user/src/com/google/gwt/user/client/ui/Tree.java implementation of the Tree] class for an example of using Event Bubbling in GWT.
 
