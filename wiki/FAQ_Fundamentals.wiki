@@ -14,7 +14,7 @@
 
   * [FAQ_GWTApplicationFiles What's with all the cache/nocache stuff and weird filenames?]
 
-  * [FAQ_BootstrapSequence In what order do operations occur in the bootstrap sequence?]
+  * [FAQ_WhenDoModulesLoad When do my modules load during the bootstrap sequence?]
 
   * [FAQ_DeferredBindingDefinition What is Deferred Binding?]
 
