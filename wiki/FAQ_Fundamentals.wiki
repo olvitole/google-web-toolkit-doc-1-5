@@ -14,6 +14,8 @@
 
   * [FAQ_GWTApplicationFiles What's with all the cache/nocache stuff and weird filenames?]
 
+  * [FAQ_BootstrapSequence In what order do operations occur in the bootstrap sequence?]
+
   * [FAQ_DeferredBindingDefinition What is Deferred Binding?]
 
   * [FAQ_StandardsModeSupport Does GWT support standards-mode?]
