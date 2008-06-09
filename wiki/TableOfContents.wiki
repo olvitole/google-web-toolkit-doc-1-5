@@ -139,6 +139,7 @@
       * [FAQ_GWTModuleInheritance How do I know which GWT modules I need to inherit?]
       * [FAQ_DeferredBindingDefinition What is Deferred Binding?]
       * [FAQ_GWTApplicationFiles What's with all the cache/nocache stuff and weird filenames?]
+      * [FAQ_WhenDoModulesLoad When do my modules load during the bootstrap sequence?]
       * [FAQ_ChangeLocationGWTApplicationFiles How do I change the location of my cache/nocache HTML files?]
       * [FAQ_TomcatRequiredOnServerForGWT Do I need to run Tomcat on my server to use GWT?]
       * [FAQ_GWTWithServerSideTemplatingTool Can I use GWT with my favorite server-side templating tool?]
