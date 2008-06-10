@@ -13,4 +13,4 @@ Tips and tricks for User Interface programming
 
 * [FAQ_UIOnePxBackgroundInIE  Why do I see poor performance in Internet Explorer when using a one pixel background image?]
 
-* [FAQ_UIUseOneListener As the application has grown, event listeners seem to be firing more slowly.]
+* [FAQ_UIUseOneListener As the application grows, event listeners seem to fire more slowly.]
