@@ -1,6 +1,6 @@
-#summary As the application has grown, event listeners seem to be firing more slowly.
+#summary As the application grows, event listeners seem to fire more slowly.
 
-= As the application has grown, event listeners seem to be firing more slowly =
+= As the application grows, event listeners seem to fire more slowly =
 
 If you are creating an interface with many widgets that need to respond to events, such as `click` events, you may find that the application handles events more and more slowly.  One example of this might be having a list of widgets in a table.
 
